@@ -5,6 +5,7 @@ extends Node2D
 @export var iterations : int = 500
 
 @onready var castle_tiles: TileMapLayer = $"Castle Tiles"
+@onready var floor: TileMapLayer = $Floor
 
 class current_tile:
 	var pos : Vector2i
@@ -41,6 +42,9 @@ func generate():
 		connect_tile(current_tiles[rand_tile_index],rand_room,rand_tile_side)
 	for tile in current_tiles:
 		castle_tiles.set_pattern(start_position+(tile.pos*4),tileset.get_pattern(tile.room.pattern_index))
+		for x in range(4):
+			for y in range(4):
+				floor.set_cell(start_position+(tile.pos*4)+Vector2i(x,y),0,Vector2i(5,0))
 
 func pick_tile():
 	var index = randi_range(0,current_tiles.size()-1)
