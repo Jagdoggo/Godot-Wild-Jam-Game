@@ -6,7 +6,6 @@
 
 [sub_resource type="Resource" id="Resource_vm22h"]
 script = ExtResource("2_t33uu")
-size = Vector2i(4, 4)
 metadata/_custom_type_script = "uid://b0vevgpwr7o01"
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_t33uu"]
