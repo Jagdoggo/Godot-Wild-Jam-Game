@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dgoquy7wbqmxv" path="res://Assets/PlayerSprites/PlayerUpAnimation4.png" id="17_efrwb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_231t4"]
-radius = 16.124516
+radius = 14.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
 animations = [{
