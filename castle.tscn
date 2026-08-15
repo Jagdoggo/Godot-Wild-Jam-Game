@@ -80,6 +80,7 @@ pattern_6 = SubResource("TileMapPattern_ml41p")
 script = ExtResource("1_vm22h")
 rooms = Array[ExtResource("2_t33uu")]([SubResource("Resource_vm22h"), SubResource("Resource_t33uu"), SubResource("Resource_7418g")])
 start_position = Vector2i(-2, -4)
+iterations = 5000
 
 [node name="Castle Tiles" type="TileMapLayer" parent="." unique_id=356495837]
 texture_filter = 1
