@@ -18,10 +18,9 @@ func _physics_process(delta: float) -> void:
 	elif input == Vector2.ZERO:
 		sprite.stop()
 	velocity = input * speed
+	sprite.speed_scale = int((velocity.x + velocity.y) / 80)
 	if inputC == 1:
-		get_child(1).speed_scale = 2
 		speed = 400
 	else:
-		get_child(1).speed_scale = 1
 		speed = 250
 	move_and_slide()
