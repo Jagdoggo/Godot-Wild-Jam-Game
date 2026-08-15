@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1u5xm5ju6u64"
-path="res://.godot/imported/Playerlaceholder.png-b869fd82a8cb1d2e807a4a8d9998db54.ctex"
+uid="uid://btoi203gmkc2s"
+path="res://.godot/imported/PlayerUpAnimation1.png-de18dd784e8b54fbe0d8c9e31f8a09ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Playerlaceholder.png"
-dest_files=["res://.godot/imported/Playerlaceholder.png-b869fd82a8cb1d2e807a4a8d9998db54.ctex"]
+source_file="res://Assets/PlayerSprites/PlayerUpAnimation1.png"
+dest_files=["res://.godot/imported/PlayerUpAnimation1.png-de18dd784e8b54fbe0d8c9e31f8a09ae.ctex"]
 
 [params]
 

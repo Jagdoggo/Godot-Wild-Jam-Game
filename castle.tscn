@@ -4,6 +4,12 @@
 [ext_resource type="Script" uid="uid://b0vevgpwr7o01" path="res://room.gd" id="2_t33uu"]
 [ext_resource type="Texture2D" uid="uid://d3pe5qsg1yv6h" path="res://Assets/CastleWallsTileMap.png" id="3_1gkcl"]
 [ext_resource type="Texture2D" uid="uid://bx6qpekk4rrww" path="res://Assets/OuterCastleWallsTileMap.png" id="3_t33uu"]
+[ext_resource type="Script" uid="uid://cwyrhs0iv03w" path="res://camera_2d.gd" id="5_2drs5"]
+[ext_resource type="Script" uid="uid://b2rqt0nbapkdo" path="res://player.gd" id="6_2ij18"]
+[ext_resource type="Texture2D" uid="uid://balenie3q3f20" path="res://Assets/PlayerSprites/PlayerRightAnimation1.png" id="7_2ij18"]
+[ext_resource type="Texture2D" uid="uid://wi8ag4g5ua5d" path="res://Assets/PlayerSprites/PlayerLeftAnimation1.png" id="8_ml41p"]
+[ext_resource type="Texture2D" uid="uid://c0taas60d2jp4" path="res://Assets/PlayerSprites/PlayerDownAnimation1.png" id="9_sv7do"]
+[ext_resource type="Texture2D" uid="uid://btoi203gmkc2s" path="res://Assets/PlayerSprites/PlayerUpAnimation1.png" id="10_0phrv"]
 
 [sub_resource type="Resource" id="Resource_vm22h"]
 script = ExtResource("2_t33uu")
@@ -76,6 +82,9 @@ pattern_4 = SubResource("TileMapPattern_7lyqe")
 pattern_5 = SubResource("TileMapPattern_2ij18")
 pattern_6 = SubResource("TileMapPattern_ml41p")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sv7do"]
+radius = 7.969558
+
 [node name="Castle" type="Node2D" unique_id=1703439008]
 script = ExtResource("1_vm22h")
 rooms = Array[ExtResource("2_t33uu")]([SubResource("Resource_vm22h"), SubResource("Resource_t33uu"), SubResource("Resource_7418g")])
@@ -88,3 +97,35 @@ tile_map_data = PackedByteArray("AAD3/wAAAAADAAAAAGD3/wEAAAAAAAAAAAD6/wAAAAADAAA
 tile_set = SubResource("TileSet_5xaec")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1849441119]
+script = ExtResource("5_2drs5")
+
+[node name="Player" type="Area2D" parent="." unique_id=891054454]
+position = Vector2(1, 235)
+script = ExtResource("6_2ij18")
+
+[node name="RightSprite" type="Sprite2D" parent="Player" unique_id=1473659345]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_2ij18")
+
+[node name="LeftSprite" type="Sprite2D" parent="Player" unique_id=783849904]
+visible = false
+texture_filter = 1
+texture = ExtResource("8_ml41p")
+
+[node name="DownSprite" type="Sprite2D" parent="Player" unique_id=160225847]
+visible = false
+texture_filter = 1
+texture = ExtResource("9_sv7do")
+
+[node name="UpSprite" type="Sprite2D" parent="Player" unique_id=1078908677]
+texture_filter = 1
+texture = ExtResource("10_0phrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=286898893]
+position = Vector2(1.0000001, 1.0000002)
+rotation = 1.4835298
+shape = SubResource("CapsuleShape2D_sv7do")
+
+[connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
+[connection signal="area_exited" from="Player" to="Player" method="_on_area_exited"]
