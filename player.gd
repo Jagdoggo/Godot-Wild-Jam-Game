@@ -6,15 +6,22 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
 	var input = Input.get_vector("Left","Right","Up","Down")
+	var inputC = Input.get_axis("PLACEHOLDER", "CHARGE!!")
 	if Input.is_action_pressed("Left"):
 		sprite.play("walk left")
-	if Input.is_action_pressed("Right"):
+	elif Input.is_action_pressed("Right"):
 		sprite.play("walk right")
-	if Input.is_action_pressed("Up"):
+	elif Input.is_action_pressed("Up"):
 		sprite.play("walk up")
-	if Input.is_action_pressed("Down"):
+	elif Input.is_action_pressed("Down"):
 		sprite.play("walk down")
-	if input == Vector2.ZERO:
+	elif input == Vector2.ZERO:
 		sprite.stop()
 	velocity = input * speed
+	if inputC == 1:
+		get_child(1).speed_scale = 2
+		speed = 400
+	else:
+		get_child(1).speed_scale = 1
+		speed = 250
 	move_and_slide()
