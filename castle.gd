@@ -61,6 +61,8 @@ func generate():
 			for y in range(4):
 				floor.set_cell(start_position+(tile.pos*4)+Vector2i(x,y),0,Vector2i(5,0))
 	nav_region.bake_navigation_polygon()
+	await nav_region.bake_finished
+	print("fineished")
 
 func pick_tile():
 	var index = randi_range(0,current_tiles.size()-1)
