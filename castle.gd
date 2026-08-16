@@ -3,6 +3,8 @@ extends Node2D
 @export var rooms : Array[Room]
 @export var start_position : Vector2i
 @export var iterations : int = 500
+@export var loot_room_chance : int = 5
+@export var loot_scene : PackedScene
 
 @onready var castle_tiles: TileMapLayer = $"Nav Region/Castle Tiles"
 @onready var nav_region: NavigationRegion2D = $"Nav Region"
@@ -43,6 +45,10 @@ func generate():
 		connect_tile(current_tiles[rand_tile_index],rand_room,rand_tile_side)
 	for tile in current_tiles:
 		castle_tiles.set_pattern(start_position+(tile.pos*4),tileset.get_pattern(tile.room.pattern_index))
+		if tile.room.is_loot_room and randi_range(1,loot_room_chance) == 1:
+			var loot = loot_scene.instantiate()
+			loot.position = (start_position+(tile.pos*4)+Vector2i(2,2)) * tileset.tile_size
+			add_child(loot)
 		for x in range(4):
 			for y in range(4):
 				floor.set_cell(start_position+(tile.pos*4)+Vector2i(x,y),0,Vector2i(5,0))

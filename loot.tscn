@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cl0kytcn3tn2b"]
+
+[ext_resource type="Texture2D" uid="uid://docmenrcx3beh" path="res://Assets/Placeholder Art.png" id="1_joivg"]
+
+[node name="Loot" type="Node2D" unique_id=2044874284]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1190065271]
+texture_filter = 1
+texture = ExtResource("1_joivg")
