@@ -220,7 +220,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("12_f0bkf")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"DoorOpening",
 "speed": 5.0
 }, {
@@ -272,9 +272,6 @@ sprite_frames = SubResource("SpriteFrames_7ksya")
 animation = &"DoorOpening"
 script = ExtResource("13_nmuqh")
 
-[node name="DoorAnimationTimer" type="Timer" parent="DoorAnimation" unique_id=434072249]
-wait_time = 0.8
-
 [node name="DoorStaticBody" type="StaticBody2D" parent="DoorAnimation" unique_id=2019616250]
 physics_material_override = SubResource("PhysicsMaterial_7ksya")
 
@@ -288,8 +285,7 @@ shape = SubResource("RectangleShape2D_48d6w")
 position = Vector2(0, -15.5)
 shape = SubResource("RectangleShape2D_48d6w")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="DoorAnimation" unique_id=2119812154]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="DoorAnimation/DoorStaticBody" unique_id=2119812154]
 occluder = SubResource("OccluderPolygon2D_val57")
 
-[connection signal="timeout" from="DoorAnimation/DoorAnimationTimer" to="DoorAnimation" method="_on_door_animation_timer_timeout"]
-[connection signal="area_entered" from="DoorAnimation/DoorStaticBody/DoorArea" to="DoorAnimation" method="_on_door_area_area_entered"]
+[connection signal="body_entered" from="DoorAnimation/DoorStaticBody/DoorArea" to="DoorAnimation" method="_on_door_area_body_entered"]
