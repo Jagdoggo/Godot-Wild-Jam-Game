@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://dofaw4mkqnhqw"]
+
+[ext_resource type="Script" uid="uid://b2a74i7nlsxgv" path="res://melee_enemy.gd" id="1_vn61j"]
+[ext_resource type="Texture2D" uid="uid://binuooytfm30f" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack1.png" id="2_woi1d"]
+[ext_resource type="Texture2D" uid="uid://b0swgl2i3kork" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack2.png" id="3_jqtdo"]
+[ext_resource type="Texture2D" uid="uid://2nr5g28b54fi" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack3.png" id="4_sjvd0"]
+[ext_resource type="Texture2D" uid="uid://cofeng5onmnaj" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack4.png" id="5_7mqrn"]
+[ext_resource type="Texture2D" uid="uid://cacrquk5s3iwa" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack5.png" id="6_bxg4l"]
+[ext_resource type="Texture2D" uid="uid://dtyouopk27s4q" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack6.png" id="7_6wsli"]
+[ext_resource type="Texture2D" uid="uid://cvdj2sfwnrivp" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack7.png" id="8_klhgd"]
+[ext_resource type="Texture2D" uid="uid://blk41tq5hxchk" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack8.png" id="9_cwg1l"]
+[ext_resource type="Texture2D" uid="uid://cbeq0oxkasfm7" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack9.png" id="10_hcfsh"]
+[ext_resource type="Texture2D" uid="uid://bqbgqldea76uk" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack10.png" id="11_pkvk1"]
+[ext_resource type="Texture2D" uid="uid://dudsvw341jxwf" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack11.png" id="12_vq6fk"]
+[ext_resource type="Texture2D" uid="uid://du51k0qx0abs8" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack12.png" id="13_xoqd3"]
+[ext_resource type="Texture2D" uid="uid://cgqpgd1k056t7" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack13.png" id="14_piwwu"]
+[ext_resource type="Texture2D" uid="uid://cb7cy7rx4tuhx" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack14.png" id="15_7e5fm"]
+[ext_resource type="Texture2D" uid="uid://caqroghydm0w4" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack15.png" id="16_w6qos"]
+[ext_resource type="Texture2D" uid="uid://cpgqqqp4r3x0k" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack16.png" id="17_i6hck"]
+[ext_resource type="Texture2D" uid="uid://y7kjvogymctp" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack17.png" id="18_6i2b6"]
+[ext_resource type="Texture2D" uid="uid://sb3knybe2nys" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack18.png" id="19_uie1m"]
+[ext_resource type="Texture2D" uid="uid://cv4na8s4a8stf" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack19.png" id="20_ao0la"]
+[ext_resource type="Texture2D" uid="uid://gkse2u3qsx0f" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack20.png" id="21_waakt"]
+[ext_resource type="Texture2D" uid="uid://dr3i68h17ihuo" path="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack21.png" id="22_pti05"]
+[ext_resource type="Texture2D" uid="uid://c0taas60d2jp4" path="res://Assets/PlayerSprites/PlayerDownAnimation1.png" id="23_bxg4l"]
+[ext_resource type="Texture2D" uid="uid://wi8ag4g5ua5d" path="res://Assets/PlayerSprites/PlayerLeftAnimation1.png" id="24_6wsli"]
+[ext_resource type="Texture2D" uid="uid://balenie3q3f20" path="res://Assets/PlayerSprites/PlayerRightAnimation1.png" id="25_klhgd"]
+[ext_resource type="Texture2D" uid="uid://btoi203gmkc2s" path="res://Assets/PlayerSprites/PlayerUpAnimation1.png" id="26_cwg1l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_woi1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jqtdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sjvd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7mqrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bxg4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6wsli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_klhgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cwg1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hcfsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pkvk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vq6fk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xoqd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_piwwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7e5fm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w6qos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i6hck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6i2b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uie1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ao0la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_waakt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_pti05")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_woi1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pkvk1")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_bxg4l")
+}],
+"loop": 1,
+"name": &"walk down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_6wsli")
+}],
+"loop": 1,
+"name": &"walk left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_klhgd")
+}],
+"loop": 1,
+"name": &"walk right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_cwg1l")
+}],
+"loop": 1,
+"name": &"walk up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
+radius = 64.0
+
+[node name="Melee Enemy" type="CharacterBody2D" unique_id=1229802981]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_vn61j")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
+target_desired_distance = 50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
+texture_filter = 1
+position = Vector2(-11, -13)
+sprite_frames = SubResource("SpriteFrames_5xaec")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
+shape = SubResource("CircleShape2D_5xaec")
+
+[node name="Attack Area" type="Area2D" parent="." unique_id=2005464173]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Area" unique_id=515109824]
+shape = SubResource("CircleShape2D_sc62p")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

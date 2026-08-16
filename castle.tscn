@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c4lcy4aadf041" path="res://Assets/CastleDoor5.png" id="11_s2vic"]
 [ext_resource type="Texture2D" uid="uid://bhxs2bnep10cj" path="res://Assets/CastleDoor6.png" id="12_f0bkf"]
 [ext_resource type="Script" uid="uid://bx31hng8furl" path="res://door_animation.gd" id="13_nmuqh"]
-[ext_resource type="PackedScene" uid="uid://dofaw4mkqnhqw" path="res://bow_enemy.tscn" id="15_bb73j"]
+[ext_resource type="PackedScene" uid="uid://dofaw4mkqnhqw" path="res://melee_enemy.tscn" id="15_bb73j"]
 
 [sub_resource type="Resource" id="Resource_vm22h"]
 script = ExtResource("2_t33uu")
@@ -100,11 +100,6 @@ animations = [{
 }],
 "loop": 0,
 "name": &"DoorOpening",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"default",
 "speed": 5.0
 }]
 
@@ -253,7 +248,7 @@ position = Vector2(0, 280)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1647298370]
 visible = false
-color = Color(0.043039158, 0.04303915, 0.04303915, 1)
+color = Color(0.080783345, 0.080783345, 0.0807833, 1)
 script = ExtResource("7_val57")
 
 [node name="DoorAnimation" type="AnimatedSprite2D" parent="." unique_id=1900871047]
@@ -304,7 +299,7 @@ tile_map_data = PackedByteArray("AAD3/wEAAAAAAAAAAAD6/wAAAAADAAAAAAD6/wEAAAAAAAA
 tile_set = SubResource("TileSet_2ij18")
 
 [node name="Bow Enemy" parent="." unique_id=1229802981 node_paths=PackedStringArray("target") instance=ExtResource("15_bb73j")]
-position = Vector2(-12, -59)
+position = Vector2(0, -187)
 target = NodePath("../Player")
 
 [connection signal="body_entered" from="DoorAnimation/DoorStaticBody/DoorArea" to="DoorAnimation" method="_on_door_area_body_entered"]

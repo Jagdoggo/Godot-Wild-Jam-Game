@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		sprite.speed_scale = 2
 		speed = 400
 	else:
-		get_child(1).speed_scale = 1
+		sprite.speed_scale = 1
 		if ran_out_of_stamina:
 			speed = 100
 		else:
