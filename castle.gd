@@ -4,7 +4,8 @@ extends Node2D
 @export var start_position : Vector2i
 @export var iterations : int = 500
 
-@onready var castle_tiles: TileMapLayer = $"Castle Tiles"
+@onready var castle_tiles: TileMapLayer = $"Nav Region/Castle Tiles"
+@onready var nav_region: NavigationRegion2D = $"Nav Region"
 @onready var floor: TileMapLayer = $Floor
 
 class current_tile:
@@ -45,6 +46,7 @@ func generate():
 		for x in range(4):
 			for y in range(4):
 				floor.set_cell(start_position+(tile.pos*4)+Vector2i(x,y),0,Vector2i(5,0))
+	nav_region.bake_navigation_polygon()
 
 func pick_tile():
 	var index = randi_range(0,current_tiles.size()-1)
