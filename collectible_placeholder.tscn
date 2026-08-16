@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ber5aplxj058b"]
+
+[ext_resource type="Texture2D" uid="uid://docmenrcx3beh" path="res://Assets/Placeholder Art.png" id="1_f7xqg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_48d6w"]
+radius = 16.03122
+
+[node name="CollectiblePlaceholder" type="Area2D" unique_id=1882579849]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1614782662]
+texture_filter = 1
+texture = ExtResource("1_f7xqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593278084]
+shape = SubResource("CircleShape2D_48d6w")

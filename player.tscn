@@ -149,3 +149,4 @@ scale = Vector2(10, 10)
 texture = SubResource("GradientTexture2D_sc62p")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1704966824]
+visible = false

@@ -4,7 +4,11 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
-func _physics_process(delta: float) -> void:
+func _ready() -> void:
+	position.x = 0
+	position.y = 280
+
+func _physics_process(_elta: float) -> void:
 	var input = Input.get_vector("Left","Right","Up","Down")
 	var inputC = Input.get_axis("PLACEHOLDER", "CHARGE!!")
 	if Input.is_action_pressed("Left"):
@@ -18,9 +22,10 @@ func _physics_process(delta: float) -> void:
 	elif input == Vector2.ZERO:
 		sprite.stop()
 	velocity = input * speed
-	sprite.speed_scale = int((velocity.x + velocity.y) / 80)
 	if inputC == 1:
+		sprite.speed_scale = 2
 		speed = 400
 	else:
+		get_child(1).speed_scale = 1
 		speed = 250
 	move_and_slide()
