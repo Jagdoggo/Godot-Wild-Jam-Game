@@ -53,7 +53,7 @@ func generate():
 			loot.loot_level = (tile.iteration / 500) + 1
 			add_child(loot)
 		var area = room_area_scene.instantiate()
-		area.enemies = tile.iteration / 500 + randi_range(-1,1)
+		area.enemies = tile.iteration / 500 + randi_range(-5,1)
 		area.player = $Player
 		area.position = (start_position+(tile.pos*4)+Vector2i(2,2)) * tileset.tile_size
 		add_child(area)
