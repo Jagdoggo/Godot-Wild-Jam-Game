@@ -18,8 +18,6 @@ func _ready() -> void:
 	bar_pos_health = health_bar.position
 
 func _physics_process(delta: float) -> void:
-	stamina_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_stam
-	health_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_health
 	var input = Input.get_vector("Left","Right","Up","Down")
 	inputC = Input.is_action_pressed("CHARGE!!")
 	if Input.is_action_pressed("Left"):
@@ -57,3 +55,7 @@ func _physics_process(delta: float) -> void:
 		ran_out_of_stamina = true
 	stamina_bar.value = stamina
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	stamina_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_stam
+	health_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_health
