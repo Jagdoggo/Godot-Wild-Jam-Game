@@ -1,9 +1,67 @@
 [gd_scene format=3 uid="uid://cl0kytcn3tn2b"]
 
-[ext_resource type="Texture2D" uid="uid://docmenrcx3beh" path="res://Assets/Placeholder Art.png" id="1_joivg"]
+[ext_resource type="Texture2D" uid="uid://oq2iefegg8i7" path="res://Assets/CastleDoor1.png" id="1_h0uop"]
+[ext_resource type="Script" uid="uid://ce2rrnmwl7qj3" path="res://loot.gd" id="1_s1bj6"]
+[ext_resource type="Texture2D" uid="uid://c508cbwccxv4w" path="res://Assets/CastleDoor2.png" id="2_s1bj6"]
+[ext_resource type="Texture2D" uid="uid://c5sri352xkcuh" path="res://Assets/CastleDoor3.png" id="3_dh5l7"]
+[ext_resource type="Texture2D" uid="uid://2w34pa4qb5s" path="res://Assets/CastleDoor4.png" id="4_pwnat"]
+[ext_resource type="Texture2D" uid="uid://c4lcy4aadf041" path="res://Assets/CastleDoor5.png" id="5_bt3rj"]
+[ext_resource type="Texture2D" uid="uid://bhxs2bnep10cj" path="res://Assets/CastleDoor6.png" id="6_yfbwb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h0uop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s1bj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dh5l7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwnat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bt3rj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yfbwb")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
+radius = 49.09175
 
 [node name="Loot" type="Node2D" unique_id=2044874284]
+script = ExtResource("1_s1bj6")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1190065271]
-texture_filter = 1
-texture = ExtResource("1_joivg")
+[node name="Label" type="Label" parent="." unique_id=2017636638]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=148937932]
+sprite_frames = SubResource("SpriteFrames_5xaec")
+animation = &"open"
+
+[node name="Open Area" type="Area2D" parent="." unique_id=1897614869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Open Area" unique_id=507881357]
+shape = SubResource("CircleShape2D_5xaec")
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed : float = 250
+@export var damage : float = 1
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var stamina_bar: ProgressBar = $"Camera2D/Stamina Bar"
@@ -38,6 +39,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		if not inputC:
 			stamina += delta * 16
+			health += delta * 2
 	if inputC:
 		stamina += -delta * 64
 		sprite.speed_scale = 2

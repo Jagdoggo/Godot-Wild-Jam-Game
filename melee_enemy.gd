@@ -10,6 +10,9 @@ extends CharacterBody2D
 @onready var attack_area: Area2D = $"Attack Area"
 
 var status : Status
+var health : float = 8
+
+var frame = 0
 
 enum Status {
 	Moving,
@@ -17,11 +20,15 @@ enum Status {
 }
 
 func _physics_process(_delta: float) -> void:
-	navigation_agent_2d.target_position = target.global_position
+	frame += 1
+	if frame > 20:
+		frame = 0
+		navigation_agent_2d.target_position = target.global_position
 	if navigation_agent_2d.is_navigation_finished() and status == Status.Moving:
 		status = Status.Attacking
 		animated_sprite_2d.play("attack")
-	velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * speed
+	else:
+		velocity = global_position.direction_to(navigation_agent_2d.get_next_path_position()) * speed
 	if target.global_position.distance_squared_to(global_position) > 60000:
 		velocity = Vector2.ZERO
 	if status == Status.Moving:
@@ -53,8 +60,10 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 
 func _on_ram_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and body.inputC:
+		health -= body.damage
 		var particles = kill_particles.instantiate()
 		particles.position = position
 		get_parent().add_child(particles)
 		particles.emitting = true
-		queue_free()
+		if health <= 0:
+			queue_free()

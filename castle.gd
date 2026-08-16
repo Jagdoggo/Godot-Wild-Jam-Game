@@ -5,6 +5,7 @@ extends Node2D
 @export var iterations : int = 500
 @export var loot_room_chance : int = 5
 @export var loot_scene : PackedScene
+@export var room_area_scene : PackedScene
 
 @onready var castle_tiles: TileMapLayer = $"Nav Region/Castle Tiles"
 @onready var nav_region: NavigationRegion2D = $"Nav Region"
@@ -17,6 +18,7 @@ class current_tile:
 	var connected_l : bool = false
 	var connected_r : bool = false
 	var room : Room
+	var iteration : int
 	
 	func _init() -> void:
 		if pos.y == 0:
@@ -42,13 +44,19 @@ func generate():
 		await found_tile_index
 		pick_room()
 		await found_room
-		connect_tile(current_tiles[rand_tile_index],rand_room,rand_tile_side)
+		connect_tile(current_tiles[rand_tile_index],rand_room,rand_tile_side,i)
 	for tile in current_tiles:
 		castle_tiles.set_pattern(start_position+(tile.pos*4),tileset.get_pattern(tile.room.pattern_index))
 		if tile.room.is_loot_room and randi_range(1,loot_room_chance) == 1:
 			var loot = loot_scene.instantiate()
 			loot.position = (start_position+(tile.pos*4)+Vector2i(2,2)) * tileset.tile_size
+			loot.loot_level = (tile.iteration / 500) + 1
 			add_child(loot)
+		var area = room_area_scene.instantiate()
+		area.enemies = tile.iteration / 500 + randi_range(-1,1)
+		area.player = $Player
+		area.position = (start_position+(tile.pos*4)+Vector2i(2,2)) * tileset.tile_size
+		add_child(area)
 		for x in range(4):
 			for y in range(4):
 				floor.set_cell(start_position+(tile.pos*4)+Vector2i(x,y),0,Vector2i(5,0))
@@ -104,6 +112,7 @@ func pick_room():
 
 func create_tile(pos : Vector2i,room : Room):
 	var tile = current_tile.new()
+	tile.iteration = 0
 	tile.pos = pos
 	tile.room = room
 	tile.connected_u = !room.connects_u
@@ -115,7 +124,7 @@ func create_tile(pos : Vector2i,room : Room):
 	tile_positions.append(tile.pos)
 	current_tiles.append(tile)
 
-func connect_tile(tile : current_tile,room : Room,side : int):
+func connect_tile(tile : current_tile,room : Room,side : int, iteration : int):
 	var new_tile_pos : Vector2i
 	var new_tile = current_tile.new()
 	match side:
@@ -145,6 +154,7 @@ func connect_tile(tile : current_tile,room : Room,side : int):
 		new_tile.connected_r = true
 	new_tile.pos = new_tile_pos
 	new_tile.room = room
+	new_tile.iteration = iteration
 	if new_tile.pos.y == 0:
 		new_tile.connected_d = true
 	for i in range(4):
