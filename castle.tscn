@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://nbsf2m17fvlu" path="res://player.tscn" id="5_231t4"]
 [ext_resource type="Texture2D" uid="uid://dkapk7we4ba5c" path="res://Assets/InsideCastleFloor.png" id="6_2drs5"]
 [ext_resource type="Texture2D" uid="uid://oq2iefegg8i7" path="res://Assets/CastleDoor1.png" id="7_a1lti"]
+[ext_resource type="Script" uid="uid://d4es8hg1qadet" path="res://canvas_modulate.gd" id="7_val57"]
 [ext_resource type="Texture2D" uid="uid://c508cbwccxv4w" path="res://Assets/CastleDoor2.png" id="8_nmuqh"]
 [ext_resource type="Texture2D" uid="uid://c5sri352xkcuh" path="res://Assets/CastleDoor3.png" id="9_val57"]
 [ext_resource type="Texture2D" uid="uid://2w34pa4qb5s" path="res://Assets/CastleDoor4.png" id="10_bb73j"]
@@ -250,9 +251,12 @@ tile_map_data = PackedByteArray("AAD//wAAAAAFAAAAAAD//wEAAAAFAAAAAAD//wIAAAAFAAA
 tile_set = SubResource("TileSet_sc62p")
 
 [node name="Player" parent="." unique_id=1466057793 instance=ExtResource("5_231t4")]
+position = Vector2(0, 280)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1647298370]
+visible = false
 color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+script = ExtResource("7_val57")
 
 [node name="DoorAnimation" type="AnimatedSprite2D" parent="." unique_id=1900871047]
 texture_filter = 1

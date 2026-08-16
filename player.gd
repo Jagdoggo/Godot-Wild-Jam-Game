@@ -4,11 +4,7 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
-func _ready() -> void:
-	position.x = 0
-	position.y = 280
-
-func _physics_process(_elta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var input = Input.get_vector("Left","Right","Up","Down")
 	var inputC = Input.get_axis("PLACEHOLDER", "CHARGE!!")
 	if Input.is_action_pressed("Left"):
