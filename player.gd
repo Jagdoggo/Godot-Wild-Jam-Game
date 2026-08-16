@@ -3,13 +3,23 @@ extends CharacterBody2D
 @export var speed : float = 250
 
 @onready var sprite: AnimatedSprite2D = $Sprite
-@onready var stamina_bar: ProgressBar = $"Stamina Bar"
+@onready var stamina_bar: ProgressBar = $"Camera2D/Stamina Bar"
+@onready var health_bar: ProgressBar = $"Camera2D/Health Bar"
+@onready var camera_2d: Camera2D = $Camera2D
 
 var inputC : bool
 var stamina : float = 100
 var ran_out_of_stamina : bool = false
+var bar_pos_stam : Vector2
+var bar_pos_health : Vector2
+
+func _ready() -> void:
+	bar_pos_stam = stamina_bar.position
+	bar_pos_health = health_bar.position
 
 func _physics_process(delta: float) -> void:
+	stamina_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_stam
+	health_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_health
 	var input = Input.get_vector("Left","Right","Up","Down")
 	inputC = Input.is_action_pressed("CHARGE!!")
 	if Input.is_action_pressed("Left"):

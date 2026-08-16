@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dr3i68h17ihuo"
-path="res://.godot/imported/Bat-tleBoiAttack21.png-d4b3356776806e7497d1762ba273308f.ctex"
+path="res://.godot/imported/Bat-tleBoiAttack21.png-050535cf8c485b61c4069505e979840a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack21.png"
-dest_files=["res://.godot/imported/Bat-tleBoiAttack21.png-d4b3356776806e7497d1762ba273308f.ctex"]
+source_file="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack21.png"
+dest_files=["res://.godot/imported/Bat-tleBoiAttack21.png-050535cf8c485b61c4069505e979840a.ctex"]
 
 [params]
 

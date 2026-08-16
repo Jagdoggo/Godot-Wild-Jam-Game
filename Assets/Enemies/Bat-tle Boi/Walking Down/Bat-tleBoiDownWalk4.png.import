@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://binuooytfm30f"
-path="res://.godot/imported/Bat-tleBoiAttack1.png-0fb840c50ab7742d1aa7bed91418a400.ctex"
+uid="uid://bydxvugy60oti"
+path="res://.godot/imported/Bat-tleBoiDownWalk4.png-1d46ab4adf7a318faaf5e42bdbf86ed6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/Bat-tle Boi/Bat-tleBoiAttack1.png"
-dest_files=["res://.godot/imported/Bat-tleBoiAttack1.png-0fb840c50ab7742d1aa7bed91418a400.ctex"]
+source_file="res://Assets/Enemies/Bat-tle Boi/Walking Down/Bat-tleBoiDownWalk4.png"
+dest_files=["res://.godot/imported/Bat-tleBoiDownWalk4.png-1d46ab4adf7a318faaf5e42bdbf86ed6.ctex"]
 
 [params]
 
