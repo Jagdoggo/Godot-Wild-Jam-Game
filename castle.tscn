@@ -196,6 +196,9 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_2ij18")
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bb73j"]
+light_mode = 1
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ksya"]
 animations = [{
 "frames": [{
@@ -232,6 +235,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48d6w"]
 size = Vector2(64, 64)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_val57"]
+polygon = PackedVector2Array(-32, -48.5, 32, -48.5, 32, 16.5, -32, 16.5)
+
 [node name="Castle" type="Node2D" unique_id=1703439008]
 script = ExtResource("1_vm22h")
 rooms = Array[ExtResource("2_t33uu")]([SubResource("Resource_vm22h"), SubResource("Resource_t33uu"), SubResource("Resource_7418g"), SubResource("Resource_2drs5"), SubResource("Resource_ml41p"), SubResource("Resource_7lyqe"), SubResource("Resource_2ij18"), SubResource("Resource_sv7do"), SubResource("Resource_0phrv"), SubResource("Resource_a1lti"), SubResource("Resource_nmuqh"), SubResource("Resource_val57"), SubResource("Resource_bb73j")])
@@ -260,6 +266,7 @@ script = ExtResource("7_val57")
 
 [node name="DoorAnimation" type="AnimatedSprite2D" parent="." unique_id=1900871047]
 texture_filter = 1
+material = SubResource("CanvasItemMaterial_bb73j")
 position = Vector2(0, 111.5)
 sprite_frames = SubResource("SpriteFrames_7ksya")
 animation = &"DoorOpening"
@@ -280,6 +287,9 @@ shape = SubResource("RectangleShape2D_48d6w")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="DoorAnimation/DoorStaticBody/DoorArea" unique_id=1761290578]
 position = Vector2(0, -15.5)
 shape = SubResource("RectangleShape2D_48d6w")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="DoorAnimation" unique_id=2119812154]
+occluder = SubResource("OccluderPolygon2D_val57")
 
 [connection signal="timeout" from="DoorAnimation/DoorAnimationTimer" to="DoorAnimation" method="_on_door_animation_timer_timeout"]
 [connection signal="area_entered" from="DoorAnimation/DoorStaticBody/DoorArea" to="DoorAnimation" method="_on_door_area_area_entered"]
