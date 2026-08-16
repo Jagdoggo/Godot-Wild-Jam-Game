@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2a74i7nlsxgv" path="res://melee_enemy.gd" id="1_vn61j"]
 [ext_resource type="Texture2D" uid="uid://dr46q0t5k0o6i" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack1 - Copy.png" id="2_1crab"]
+[ext_resource type="PackedScene" uid="uid://dqbgyclq2r5al" path="res://kill_particles.tscn" id="2_2vxer"]
 [ext_resource type="Texture2D" uid="uid://binuooytfm30f" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack1.png" id="3_2vxer"]
 [ext_resource type="Texture2D" uid="uid://b0swgl2i3kork" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack2.png" id="4_a6w64"]
 [ext_resource type="Texture2D" uid="uid://2nr5g28b54fi" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack3.png" id="5_s84bq"]
@@ -121,7 +122,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack",
-"speed": 15.0
+"speed": 45.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -233,10 +234,14 @@ radius = 16.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
 radius = 64.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1crab"]
+radius = 37.054016
+
 [node name="Melee Enemy" type="CharacterBody2D" unique_id=1229802981]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_vn61j")
+kill_particles = ExtResource("2_2vxer")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
 target_desired_distance = 50.0
@@ -245,7 +250,9 @@ target_desired_distance = 50.0
 texture_filter = 1
 position = Vector2(11, 1)
 sprite_frames = SubResource("SpriteFrames_5xaec")
-animation = &"walk down"
+animation = &"attack"
+frame = 21
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
 shape = SubResource("CircleShape2D_5xaec")
@@ -255,5 +262,11 @@ shape = SubResource("CircleShape2D_5xaec")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Area" unique_id=515109824]
 shape = SubResource("CircleShape2D_sc62p")
 
+[node name="Ram Area" type="Area2D" parent="." unique_id=1651850762]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ram Area" unique_id=356756325]
+shape = SubResource("CircleShape2D_1crab")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="body_entered" from="Ram Area" to="." method="_on_ram_area_body_entered"]

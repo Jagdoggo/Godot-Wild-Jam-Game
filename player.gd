@@ -9,6 +9,7 @@ extends CharacterBody2D
 
 var inputC : bool
 var stamina : float = 100
+var health : float = 100
 var ran_out_of_stamina : bool = false
 var bar_pos_stam : Vector2
 var bar_pos_health : Vector2
@@ -53,7 +54,10 @@ func _physics_process(delta: float) -> void:
 	if stamina < 0:
 		stamina = 0
 		ran_out_of_stamina = true
+	if health <= 0:
+		get_tree().reload_current_scene()
 	stamina_bar.value = stamina
+	health_bar.value = health
 	move_and_slide()
 
 func _process(delta: float) -> void:

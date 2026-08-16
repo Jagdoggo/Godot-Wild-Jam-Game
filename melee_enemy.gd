@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 @export var speed : float = 100
+@export var damage : float = 25
 @export var target : CharacterBody2D
+@export var kill_particles : PackedScene
 
 @onready var navigation_agent_2d: NavigationAgent2D = $NavigationAgent2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -47,4 +49,12 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 	if animated_sprite_2d.animation == "attack" and animated_sprite_2d.frame == 14:
 		for body in attack_area.get_overlapping_bodies():
 			if body.name == "Player":
-				get_tree().reload_current_scene()
+				body.health -= damage
+
+func _on_ram_area_body_entered(body: Node2D) -> void:
+	if body.name == "Player" and body.inputC:
+		var particles = kill_particles.instantiate()
+		particles.position = position
+		get_parent().add_child(particles)
+		particles.emitting = true
+		queue_free()

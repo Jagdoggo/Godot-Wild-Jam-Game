@@ -160,6 +160,7 @@ sprite_frames = SubResource("SpriteFrames_5xaec")
 animation = &"walk up"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1981915947]
+ignore_rotation = false
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
