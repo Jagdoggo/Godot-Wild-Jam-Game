@@ -56,6 +56,8 @@ func _physics_process(delta: float) -> void:
 	if stamina > 100:
 		stamina = 100
 		ran_out_of_stamina = false
+	if health > 100:
+		health = 100
 	if stamina < 0:
 		stamina = 0
 		ran_out_of_stamina = true
