@@ -250,19 +250,21 @@ target_desired_distance = 50.0
 texture_filter = 1
 position = Vector2(11, 1)
 sprite_frames = SubResource("SpriteFrames_5xaec")
-animation = &"attack"
-frame = 21
-frame_progress = 1.0
+animation = &"idle"
+frame_progress = 0.2268833
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
+visible = false
 shape = SubResource("CircleShape2D_5xaec")
 
 [node name="Attack Area" type="Area2D" parent="." unique_id=2005464173]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Area" unique_id=515109824]
 shape = SubResource("CircleShape2D_sc62p")
 
 [node name="Ram Area" type="Area2D" parent="." unique_id=1651850762]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ram Area" unique_id=356756325]
 shape = SubResource("CircleShape2D_1crab")
