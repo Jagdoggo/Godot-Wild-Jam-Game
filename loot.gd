@@ -9,7 +9,7 @@ extends Node2D
 var player : CharacterBody2D
 
 func _ready() -> void:
-	if loot_level < sprites.size():
+	if loot_level <= sprites.size():
 		sprites[loot_level-1].visible = true
 
 func _process(delta: float) -> void:
@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		for body in open_area.get_overlapping_bodies():
 			if body.name == "Player":
 				player = body
-				if loot_level < sprites.size():
+				if loot_level <= sprites.size():
 					sprites[loot_level-1].play("open")
 
 func _on_sprite_animation_finished() -> void:
