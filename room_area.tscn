@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bk8fyotllsjpj"]
+
+[ext_resource type="Script" uid="uid://dewbq7be00840" path="res://room_area.gd" id="1_g1h18"]
+[ext_resource type="PackedScene" uid="uid://dofaw4mkqnhqw" path="res://melee_enemy.tscn" id="2_hbxs6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
+radius = 128.0
+
+[node name="Room Area" type="Area2D" unique_id=742151515]
+script = ExtResource("1_g1h18")
+enemy_scene = ExtResource("2_hbxs6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579786461]
+shape = SubResource("CircleShape2D_5xaec")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
