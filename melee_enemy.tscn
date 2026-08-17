@@ -232,7 +232,7 @@ animations = [{
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
-radius = 50.0
+radius = 55.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1crab"]
 radius = 37.054016
@@ -241,8 +241,6 @@ radius = 37.054016
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_vn61j")
-speed = null
-damage = null
 kill_particles = ExtResource("2_2vxer")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
