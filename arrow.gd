@@ -7,7 +7,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print(body.name)
 	if body == self:
 		return
 	if body.name == "Player":

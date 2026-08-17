@@ -190,3 +190,7 @@ func connect_tile(tile : current_tile,room : Room,side : int, iteration : int):
 func _ready() -> void:
 	tileset = castle_tiles.tile_set
 	generate()
+
+func _on_ending_room_body_entered(body: Node2D) -> void:
+	if body.name == "Player" and $"Final Room Interact Area".completed:
+		get_tree().change_scene_to_file("res://next_castle_ui.tscn")

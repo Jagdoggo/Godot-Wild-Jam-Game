@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ccn5lsoi1dy2q"]
+
+[ext_resource type="Script" uid="uid://dlgq4oki5iwo3" path="res://next_castle_ui.gd" id="1_ue11y"]
+
+[node name="Next castle ui" type="Control" unique_id=262847755]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ue11y")
+
+[node name="Button" type="Button" parent="." unique_id=799602275]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -15.5
+offset_right = 84.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = " Go to the next castle"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
