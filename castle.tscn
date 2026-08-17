@@ -280,7 +280,6 @@ tile_set = SubResource("TileSet_sc62p")
 
 [node name="Player" parent="." unique_id=1466057793 instance=ExtResource("5_231t4")]
 position = Vector2(0, 280)
-cheating = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1647298370]
 visible = false
