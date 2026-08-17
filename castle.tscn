@@ -150,6 +150,10 @@ tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 3
 tile_data = PackedInt32Array(0, 2, 1610612736, 196608, 2, 1610612736, 1, 2, 1610612736, 196609, 2, 1610612736, 2, 2, 1610612736, 196610, 2, 1610612736, 3, 2, 1610612736, 196611, 2, 1610612736)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_s2vic"]
+vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)])
+agent_radius = 0.0
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_231t4"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -191,10 +195,6 @@ agent_radius = 0.0
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2drs5"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_aoeh4"]
-
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_wx51g"]
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7lyqe"]
 texture = ExtResource("3_1gkcl")
 texture_region_size = Vector2i(32, 32)
@@ -205,7 +205,7 @@ texture_region_size = Vector2i(32, 32)
 1:0/0 = 0
 1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2drs5")
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-1:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_aoeh4")
+1:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_f0bkf")
 2:0/0 = 0
 2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2drs5")
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -221,7 +221,7 @@ texture_region_size = Vector2i(32, 32)
 5:0/0 = 0
 5:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2drs5")
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-5:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_wx51g")
+5:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_f0bkf")
 
 [sub_resource type="TileSet" id="TileSet_2ij18"]
 tile_size = Vector2i(32, 32)
