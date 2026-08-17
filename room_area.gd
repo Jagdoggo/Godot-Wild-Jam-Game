@@ -16,7 +16,6 @@ func _on_body_entered(body: Node2D) -> void:
 			enemy.position = Vector2(randf_range(-2,2),randf_range(-2,2))
 			add_child.call_deferred(enemy)
 			if randf_range(0,1) < float(Global.dungeon_level) / 10:
-				print("archer")
 				var ranged = ranged_enemy_scene.instantiate()
 				ranged.target = player
 				ranged.position = Vector2(randf_range(-2,2),randf_range(-2,2))
