@@ -248,10 +248,9 @@ target_desired_distance = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
 texture_filter = 1
-position = Vector2(11, 1)
+position = Vector2(-11, -12)
 sprite_frames = SubResource("SpriteFrames_5xaec")
-animation = &"idle"
-frame_progress = 0.5523884
+animation = &"walk up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
 shape = SubResource("CircleShape2D_5xaec")

@@ -1,3 +1,3 @@
 extends Node
 
-@export var dungeon_level : int = 0
+@export var dungeon_level : int = 1
