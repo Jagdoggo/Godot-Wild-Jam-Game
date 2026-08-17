@@ -6,6 +6,7 @@ extends AnimatedSprite2D
 func _on_door_area_body_entered(body: Node2D) -> void:
 	if player.inputC:
 		play()
+		$SFX.play()
 		break_particles.emitting = true
 		await animation_finished
 		$DoorStaticBody.queue_free()

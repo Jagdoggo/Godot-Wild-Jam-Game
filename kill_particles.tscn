@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dqbgyclq2r5al"]
 
 [ext_resource type="Script" uid="uid://d46vsvvgpp4t" path="res://kill_particles.gd" id="1_ieos7"]
+[ext_resource type="AudioStream" uid="uid://dgib4xv5m2nq6" path="res://Assets/Sounds/hurt.wav" id="2_47p42"]
+[ext_resource type="AudioStream" uid="uid://ihlreqv6md5i" path="res://Assets/Sounds/killed.wav" id="3_e3aw4"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jv83a"]
 light_mode = 1
@@ -35,5 +37,12 @@ initial_velocity_min = 250.0
 initial_velocity_max = 250.0
 scale_amount_curve = SubResource("Curve_47p42")
 script = ExtResource("1_ieos7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1357806910]
+stream = ExtResource("2_47p42")
+autoplay = true
+
+[node name="KilledSFX" type="AudioStreamPlayer2D" parent="." unique_id=2006124532]
+stream = ExtResource("3_e3aw4")
 
 [connection signal="finished" from="." to="." method="_on_finished"]

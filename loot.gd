@@ -22,5 +22,6 @@ func _process(delta: float) -> void:
 					sprites[loot_level-1].play("open")
 
 func _on_sprite_animation_finished() -> void:
+	$SFX.play()
 	player.damage += float(loot_level)/8
 	process_mode = Node.PROCESS_MODE_DISABLED

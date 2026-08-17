@@ -64,4 +64,5 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		get_parent().add_child(particles)
 		particles.emitting = true
 		if health <= 0:
+			particles.kill = true
 			queue_free()

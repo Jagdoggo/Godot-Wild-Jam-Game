@@ -63,7 +63,9 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		health -= body.damage
 		var particles = kill_particles.instantiate()
 		particles.position = position
-		get_parent().add_child(particles)
+		get_parent().add_child.call_deferred(particles)
 		particles.emitting = true
 		if health <= 0:
+			particles.kill = true
+			print(particles.kill)
 			queue_free()

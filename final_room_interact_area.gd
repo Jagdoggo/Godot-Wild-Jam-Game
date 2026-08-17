@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Action") and !activated:
 		for body in get_overlapping_bodies():
 			if body.name == "Player":
+				$"Start SFX".play()
 				activated = true
 				for i in range(count):
 					var enemy = enemy_scene.instantiate()
@@ -37,5 +38,6 @@ func _process(delta: float) -> void:
 			if child is CharacterBody2D:
 				found = true
 		if !found:
+			$"Sucess SFX".play()
 			$Label.show()
 			completed = true

@@ -17,8 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://bhxs2bnep10cj" path="res://Assets/CastleDoor6.png" id="12_f0bkf"]
 [ext_resource type="Script" uid="uid://bx31hng8furl" path="res://door_animation.gd" id="13_nmuqh"]
 [ext_resource type="PackedScene" uid="uid://dofaw4mkqnhqw" path="res://melee_enemy.tscn" id="15_bb73j"]
+[ext_resource type="AudioStream" uid="uid://ihlreqv6md5i" path="res://Assets/Sounds/killed.wav" id="15_r871a"]
 [ext_resource type="Script" uid="uid://b43jwkj0oqg1g" path="res://final_room_interact_area.gd" id="17_aoeh4"]
 [ext_resource type="PackedScene" uid="uid://c2scnmsq3qe5n" path="res://ranged_enemy.tscn" id="19_wx51g"]
+[ext_resource type="AudioStream" uid="uid://brwgb3xitjp4b" path="res://Assets/Sounds/sucess.wav" id="21_8nkow"]
 
 [sub_resource type="Resource" id="Resource_vm22h"]
 script = ExtResource("2_t33uu")
@@ -323,6 +325,9 @@ initial_velocity_min = 250.0
 initial_velocity_max = 250.0
 scale_amount_curve = SubResource("Curve_sc62p")
 
+[node name="SFX" type="AudioStreamPlayer2D" parent="DoorAnimation" unique_id=943057338]
+stream = ExtResource("15_r871a")
+
 [node name="Nav Region" type="NavigationRegion2D" parent="." unique_id=1108399464]
 navigation_polygon = SubResource("NavigationPolygon_5xaec")
 
@@ -360,6 +365,12 @@ text = "Completed,
 now exit the castle"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sucess SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=587656129]
+stream = ExtResource("21_8nkow")
+
+[node name="Start SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=1018628602]
+stream = ExtResource("15_r871a")
 
 [node name="Ending room" type="Area2D" parent="." unique_id=1483314828]
 position = Vector2(0, 608)

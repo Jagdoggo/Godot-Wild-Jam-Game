@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cljjngjt5ln0v" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 5.png" id="31_bu221"]
 [ext_resource type="Texture2D" uid="uid://whbyrnadgh5k" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 6.png" id="32_y8gc4"]
 [ext_resource type="Texture2D" uid="uid://dwfqgcgts8si6" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 7.png" id="33_j5812"]
+[ext_resource type="AudioStream" uid="uid://brwgb3xitjp4b" path="res://Assets/Sounds/sucess.wav" id="34_ei5m7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
 animations = [{
@@ -214,6 +215,10 @@ animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Open Area" unique_id=507881357]
 shape = SubResource("CircleShape2D_5xaec")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="." unique_id=1078156071]
+process_mode = 3
+stream = ExtResource("34_ei5m7")
 
 [connection signal="animation_finished" from="Sprite C" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Sprite L1" to="." method="_on_sprite_animation_finished"]
