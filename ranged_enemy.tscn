@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://c2scnmsq3qe5n"]
+
+[ext_resource type="Script" uid="uid://cgj5qcqdqxdtg" path="res://ranged_enemy.gd" id="1_xrttj"]
+[ext_resource type="PackedScene" uid="uid://dqbgyclq2r5al" path="res://kill_particles.tscn" id="2_g4ye6"]
+[ext_resource type="Texture2D" uid="uid://t2od2lp4wl87" path="res://Assets/Enemies/Army Man/Attack/ArmyMan1.png" id="2_vberl"]
+[ext_resource type="Texture2D" uid="uid://ch78o1wkfc3pb" path="res://Assets/Enemies/Army Man/Attack/ArmyMan2.png" id="3_g4ye6"]
+[ext_resource type="PackedScene" uid="uid://d1e8ypfuq7xc3" path="res://arrow.tscn" id="3_sdf6s"]
+[ext_resource type="Texture2D" uid="uid://cwaw348wdiivl" path="res://Assets/Enemies/Army Man/Attack/ArmyMan3.png" id="4_sdf6s"]
+[ext_resource type="Texture2D" uid="uid://bsnjim0e4nl5r" path="res://Assets/Enemies/Army Man/Attack/ArmyMan4.png" id="5_r3dvp"]
+[ext_resource type="Texture2D" uid="uid://75s8py05yejc" path="res://Assets/Enemies/Army Man/Attack/ArmyMan5.png" id="6_qxs8t"]
+[ext_resource type="Texture2D" uid="uid://bcw4bk3yqc5va" path="res://Assets/Enemies/Army Man/Attack/ArmyMan6.png" id="7_8b40p"]
+[ext_resource type="Texture2D" uid="uid://c6xu11seu5an3" path="res://Assets/Enemies/Army Man/Attack/ArmyMan7.png" id="8_8qf65"]
+[ext_resource type="Texture2D" uid="uid://cwtpmj5u3y3ty" path="res://Assets/Enemies/Army Man/Attack/ArmyMan8.png" id="9_rvfdj"]
+[ext_resource type="Texture2D" uid="uid://bvh8dq0xojmrx" path="res://Assets/Enemies/Army Man/Attack/ArmyMan9.png" id="10_a1rym"]
+[ext_resource type="Texture2D" uid="uid://nyqbo8xs4mty" path="res://Assets/Enemies/Army Man/Attack/ArmyMan10.png" id="11_3d16b"]
+[ext_resource type="Texture2D" uid="uid://dqydooc1ne0xl" path="res://Assets/Enemies/Army Man/Attack/ArmyMan11.png" id="12_b7aep"]
+[ext_resource type="Texture2D" uid="uid://x5bhde2wayy1" path="res://Assets/Enemies/Army Man/Idle/ArmyManIdle1.png" id="13_sgnxt"]
+[ext_resource type="Texture2D" uid="uid://b63363wexjr8u" path="res://Assets/Enemies/Army Man/Idle/ArmyManIdle2.png" id="14_yonae"]
+[ext_resource type="Texture2D" uid="uid://b2pfrvo6ps4nu" path="res://Assets/Enemies/Army Man/Walking Down/ArmyManWalkingDown1.png" id="15_r2m7i"]
+[ext_resource type="Texture2D" uid="uid://cxkian1w3g72g" path="res://Assets/Enemies/Army Man/Walking Down/ArmyManWalkingDown2.png" id="16_22tw5"]
+[ext_resource type="Texture2D" uid="uid://bdpd5bk67vm1s" path="res://Assets/Enemies/Army Man/Walking Down/ArmyManWalkingDown3.png" id="17_w166t"]
+[ext_resource type="Texture2D" uid="uid://bwmy68xj4kach" path="res://Assets/Enemies/Army Man/Walking Down/ArmyManWalkingDown4.png" id="18_fgb45"]
+[ext_resource type="Texture2D" uid="uid://b06ok7oc84hxh" path="res://Assets/Enemies/Army Man/Walking Left/ArmyManWalkingLeft1.png" id="19_w6vix"]
+[ext_resource type="Texture2D" uid="uid://cghkm136irhay" path="res://Assets/Enemies/Army Man/Walking Left/ArmyManWalkingLeft2.png" id="20_h482l"]
+[ext_resource type="Texture2D" uid="uid://cps6oqgu6tgje" path="res://Assets/Enemies/Army Man/Walking Left/ArmyManWalkingLeft3.png" id="21_jg8ve"]
+[ext_resource type="Texture2D" uid="uid://bxcijqj5yyisw" path="res://Assets/Enemies/Army Man/Walking Left/ArmyManWalkingLeft4.png" id="22_whg8j"]
+[ext_resource type="Texture2D" uid="uid://da6ov20p4l2r1" path="res://Assets/Enemies/Army Man/Walking Right/ArmyManWalkingRight1.png" id="23_oxssr"]
+[ext_resource type="Texture2D" uid="uid://75llj0iy7mg3" path="res://Assets/Enemies/Army Man/Walking Right/ArmyManWalkingRight2.png" id="24_4sccr"]
+[ext_resource type="Texture2D" uid="uid://b73nkosxogb20" path="res://Assets/Enemies/Army Man/Walking Right/ArmyManWalkingRight3.png" id="25_3meds"]
+[ext_resource type="Texture2D" uid="uid://du5yrl20b8cxk" path="res://Assets/Enemies/Army Man/Walking Right/ArmyManWalkingRight4.png" id="26_s66gi"]
+[ext_resource type="Texture2D" uid="uid://dum1upfbsbrph" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp1.png" id="27_gwjsk"]
+[ext_resource type="Texture2D" uid="uid://cihfjann4d2dv" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp2.png" id="28_l1o7d"]
+[ext_resource type="Texture2D" uid="uid://ds0mnv55wgx0u" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp3.png" id="29_xxudj"]
+[ext_resource type="Texture2D" uid="uid://bpoeabn2sgdko" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp4.png" id="30_akn1l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4v3he"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vberl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g4ye6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sdf6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r3dvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qxs8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8b40p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8qf65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rvfdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a1rym")
+}, {
+"duration": 4.0,
+"texture": ExtResource("11_3d16b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b7aep")
+}],
+"loop": 0,
+"name": &"attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_sgnxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yonae")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_r2m7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_22tw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w166t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fgb45")
+}],
+"loop": 1,
+"name": &"walk down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_w6vix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h482l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jg8ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_whg8j")
+}],
+"loop": 1,
+"name": &"walk left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_oxssr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4sccr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3meds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_s66gi")
+}],
+"loop": 1,
+"name": &"walk right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_gwjsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_l1o7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xxudj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_akn1l")
+}],
+"loop": 1,
+"name": &"walk up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1crab"]
+radius = 37.054016
+
+[node name="Ranged Enemy" type="CharacterBody2D" unique_id=1229802981]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_xrttj")
+kill_particles = ExtResource("2_g4ye6")
+arrow_scene = ExtResource("3_sdf6s")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
+target_desired_distance = 160.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4v3he")
+animation = &"idle"
+frame = 1
+frame_progress = 0.026931597
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
+shape = SubResource("CircleShape2D_5xaec")
+
+[node name="Attack Area" type="Area2D" parent="." unique_id=2005464173]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack Area" unique_id=515109824]
+shape = SubResource("CircleShape2D_sc62p")
+
+[node name="Ram Area" type="Area2D" parent="." unique_id=1651850762]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ram Area" unique_id=356756325]
+shape = SubResource("CircleShape2D_1crab")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1203081628]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Ram Area" to="." method="_on_ram_area_body_entered"]

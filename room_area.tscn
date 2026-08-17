@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dewbq7be00840" path="res://room_area.gd" id="1_g1h18"]
 [ext_resource type="PackedScene" uid="uid://dofaw4mkqnhqw" path="res://melee_enemy.tscn" id="2_hbxs6"]
+[ext_resource type="PackedScene" uid="uid://c2scnmsq3qe5n" path="res://ranged_enemy.tscn" id="3_wbueg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
 radius = 256.0
@@ -9,6 +10,7 @@ radius = 256.0
 [node name="Room Area" type="Area2D" unique_id=742151515]
 script = ExtResource("1_g1h18")
 enemy_scene = ExtResource("2_hbxs6")
+ranged_enemy_scene = ExtResource("3_wbueg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579786461]
 shape = SubResource("CircleShape2D_5xaec")

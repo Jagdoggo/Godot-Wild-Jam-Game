@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d1e8ypfuq7xc3"]
+
+[ext_resource type="Script" uid="uid://bdcvb8hkcsjdo" path="res://arrow.gd" id="1_2ndhl"]
+[ext_resource type="Texture2D" uid="uid://c2qiflj573d0n" path="res://Assets/Enemies/Army Man/ArmyManArrow.png" id="1_l5ahi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ndhl"]
+radius = 1.9999999
+height = 34.0
+
+[node name="Arrow" type="Area2D" unique_id=945215839]
+script = ExtResource("1_2ndhl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=560587579]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_2ndhl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=711906359]
+texture_filter = 1
+texture = ExtResource("1_l5ahi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

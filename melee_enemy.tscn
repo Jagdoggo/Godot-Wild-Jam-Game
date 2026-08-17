@@ -24,17 +24,17 @@
 [ext_resource type="Texture2D" uid="uid://cv4na8s4a8stf" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack19.png" id="21_22x62"]
 [ext_resource type="Texture2D" uid="uid://gkse2u3qsx0f" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack20.png" id="22_hiyhs"]
 [ext_resource type="Texture2D" uid="uid://dr3i68h17ihuo" path="res://Assets/Enemies/Bat-tle Boi/Attack/Bat-tleBoiAttack21.png" id="23_71uqo"]
-[ext_resource type="Texture2D" uid="uid://0ge1blld476r" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft1.png" id="24_1vfmf"]
-[ext_resource type="Texture2D" uid="uid://c1o1rffek0f4r" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft2.png" id="25_30ioh"]
-[ext_resource type="Texture2D" uid="uid://6tl88o4j1jpx" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft3.png" id="26_ofulr"]
-[ext_resource type="Texture2D" uid="uid://ct4itbmvsoc7j" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft4.png" id="27_22bf7"]
-[ext_resource type="Texture2D" uid="uid://dn2c505178ki" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft5.png" id="28_b5q5e"]
-[ext_resource type="Texture2D" uid="uid://b2ep58poslask" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft6.png" id="29_5i3t8"]
-[ext_resource type="Texture2D" uid="uid://dx4ugh7w2txy2" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft7.png" id="30_j6vu0"]
-[ext_resource type="Texture2D" uid="uid://cg8jrb000ag2j" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft8.png" id="31_nf3t1"]
-[ext_resource type="Texture2D" uid="uid://btaq5bp8b7cny" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft9.png" id="32_yox8i"]
-[ext_resource type="Texture2D" uid="uid://d1v1oocrq72g" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdleLeft10.png" id="33_mftuh"]
+[ext_resource type="Texture2D" uid="uid://j1ypsxlw50m8" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle1.png" id="25_2vxer"]
+[ext_resource type="Texture2D" uid="uid://deaiu2gi0fb2w" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle2.png" id="26_a6w64"]
+[ext_resource type="Texture2D" uid="uid://b7h3dc1p60kq4" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle3.png" id="27_s84bq"]
+[ext_resource type="Texture2D" uid="uid://b2r1vp3co8kel" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle4.png" id="28_uh51d"]
+[ext_resource type="Texture2D" uid="uid://dmt4c64ll83qn" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle5.png" id="29_pimel"]
+[ext_resource type="Texture2D" uid="uid://cx2jra4rmoq4f" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle6.png" id="30_ui6j2"]
+[ext_resource type="Texture2D" uid="uid://5ok53utnw155" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle7.png" id="31_b8y62"]
+[ext_resource type="Texture2D" uid="uid://dkexlsx6fnm60" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle8.png" id="32_lclna"]
+[ext_resource type="Texture2D" uid="uid://dumvsg2sa33t7" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle9.png" id="33_qjj4d"]
 [ext_resource type="Texture2D" uid="uid://bnhmh7hnl80cv" path="res://Assets/Enemies/Bat-tle Boi/Walking Down/Bat-tleBoiDownWalk1.png" id="34_uegd0"]
+[ext_resource type="Texture2D" uid="uid://dg0ou6kctq70n" path="res://Assets/Enemies/Bat-tle Boi/Idle/Bat-tleBoiIdle10.png" id="34_vbags"]
 [ext_resource type="Texture2D" uid="uid://c48r06jvurlna" path="res://Assets/Enemies/Bat-tle Boi/Walking Down/Bat-tleBoiDownWalk2.png" id="35_lmug4"]
 [ext_resource type="Texture2D" uid="uid://cfq0n5auqmqxu" path="res://Assets/Enemies/Bat-tle Boi/Walking Down/Bat-tleBoiDownWalk3.png" id="36_px8je"]
 [ext_resource type="Texture2D" uid="uid://bydxvugy60oti" path="res://Assets/Enemies/Bat-tle Boi/Walking Down/Bat-tleBoiDownWalk4.png" id="37_7p1mi"]
@@ -126,34 +126,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("24_1vfmf")
+"texture": ExtResource("25_2vxer")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_30ioh")
+"texture": ExtResource("26_a6w64")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_ofulr")
+"texture": ExtResource("27_s84bq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_22bf7")
+"texture": ExtResource("28_uh51d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_b5q5e")
+"texture": ExtResource("29_pimel")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_5i3t8")
+"texture": ExtResource("30_ui6j2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_j6vu0")
+"texture": ExtResource("31_b8y62")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_nf3t1")
+"texture": ExtResource("32_lclna")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_yox8i")
+"texture": ExtResource("33_qjj4d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_mftuh")
+"texture": ExtResource("34_vbags")
 }],
 "loop": 1,
 "name": &"idle",
@@ -251,8 +251,7 @@ texture_filter = 1
 position = Vector2(11, 1)
 sprite_frames = SubResource("SpriteFrames_5xaec")
 animation = &"idle"
-frame = 9
-frame_progress = 0.7999387
+frame_progress = 0.5523884
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
 shape = SubResource("CircleShape2D_5xaec")
