@@ -21,7 +21,7 @@ enum Status {
 
 func _physics_process(_delta: float) -> void:
 	frame += 1
-	if frame >= 2:
+	if frame >= 10:
 		frame = 0
 		navigation_agent_2d.target_position = target.global_position
 	if navigation_agent_2d.is_navigation_finished() and status == Status.Moving:

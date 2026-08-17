@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed : float = 250
 @export var damage : float = 1
+@export var cheating : bool = false
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 @onready var stamina_bar: ProgressBar = $"Camera2D/Stamina Bar"
@@ -20,6 +21,8 @@ func _ready() -> void:
 	bar_pos_health = health_bar.position
 
 func _physics_process(delta: float) -> void:
+	if cheating:
+		health = 100
 	var input = Input.get_vector("Left","Right","Up","Down")
 	inputC = Input.is_action_pressed("CHARGE!!")
 	if Input.is_action_pressed("Left"):
@@ -39,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		if not inputC:
 			stamina += delta * 16
-			health += delta * 2
+			health += delta * 4
 	if inputC:
 		stamina += -delta * 64
 		sprite.speed_scale = 2

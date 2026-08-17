@@ -157,7 +157,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -232,7 +232,7 @@ animations = [{
 radius = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
-radius = 39.20459
+radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1crab"]
 radius = 37.054016
@@ -244,13 +244,15 @@ script = ExtResource("1_vn61j")
 kill_particles = ExtResource("2_2vxer")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
-target_desired_distance = 50.0
+target_desired_distance = 40.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
 texture_filter = 1
 position = Vector2(11, 1)
 sprite_frames = SubResource("SpriteFrames_5xaec")
 animation = &"idle"
+frame = 9
+frame_progress = 0.7999387
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
 shape = SubResource("CircleShape2D_5xaec")

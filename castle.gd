@@ -46,6 +46,9 @@ func generate():
 		await found_room
 		connect_tile(current_tiles[rand_tile_index],rand_room,rand_tile_side,i)
 	for tile in current_tiles:
+		for x in range(4):
+			for y in range(4):
+				start_position+(tile.pos*4)+Vector2i(x,y)
 		castle_tiles.set_pattern(start_position+(tile.pos*4),tileset.get_pattern(tile.room.pattern_index))
 		if tile.room.is_loot_room and randi_range(1,loot_room_chance) == 1:
 			var loot = loot_scene.instantiate()
@@ -60,6 +63,11 @@ func generate():
 		for x in range(4):
 			for y in range(4):
 				floor.set_cell(start_position+(tile.pos*4)+Vector2i(x,y),0,Vector2i(5,0))
+	for x in range(16):
+		for y in range(16):
+			castle_tiles.erase_cell(Vector2i(-8,-101)+Vector2i(x,y))
+			floor.set_cell(Vector2i(-8,-101)+Vector2i(x,y),0,Vector2i(6,0))
+	castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(3))
 	await get_tree().physics_frame
 	nav_region.bake_navigation_polygon()
 	await nav_region.bake_finished
