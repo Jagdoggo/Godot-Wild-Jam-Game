@@ -1,33 +1,161 @@
 [gd_scene format=3 uid="uid://cl0kytcn3tn2b"]
 
-[ext_resource type="Texture2D" uid="uid://oq2iefegg8i7" path="res://Assets/CastleDoor1.png" id="1_h0uop"]
 [ext_resource type="Script" uid="uid://ce2rrnmwl7qj3" path="res://loot.gd" id="1_s1bj6"]
-[ext_resource type="Texture2D" uid="uid://c508cbwccxv4w" path="res://Assets/CastleDoor2.png" id="2_s1bj6"]
-[ext_resource type="Texture2D" uid="uid://c5sri352xkcuh" path="res://Assets/CastleDoor3.png" id="3_dh5l7"]
-[ext_resource type="Texture2D" uid="uid://2w34pa4qb5s" path="res://Assets/CastleDoor4.png" id="4_pwnat"]
-[ext_resource type="Texture2D" uid="uid://c4lcy4aadf041" path="res://Assets/CastleDoor5.png" id="5_bt3rj"]
-[ext_resource type="Texture2D" uid="uid://bhxs2bnep10cj" path="res://Assets/CastleDoor6.png" id="6_yfbwb"]
+[ext_resource type="Texture2D" uid="uid://ej5ydudwswiu" path="res://Assets/Chests/Common/Common1.png" id="2_pwnat"]
+[ext_resource type="Texture2D" uid="uid://d4gr4duwe4dj5" path="res://Assets/Chests/Common/Common2.png" id="3_bt3rj"]
+[ext_resource type="Texture2D" uid="uid://b6b6ajod3yiyc" path="res://Assets/Chests/Common/Common3.png" id="4_yfbwb"]
+[ext_resource type="Texture2D" uid="uid://cctmec55nyvuq" path="res://Assets/Chests/Common/Common4.png" id="5_ckji1"]
+[ext_resource type="Texture2D" uid="uid://vfnpwvw7aoq2" path="res://Assets/Chests/Common/Common5.png" id="6_f5vny"]
+[ext_resource type="Texture2D" uid="uid://ksh3inam0e4f" path="res://Assets/Chests/Common/Common7.png" id="7_cu8i4"]
+[ext_resource type="Texture2D" uid="uid://ccd3ephlpnyo" path="res://Assets/Chests/Common/Common6.png" id="8_mk61x"]
+[ext_resource type="Texture2D" uid="uid://do5kx3aw4b6x3" path="res://Assets/Chests/Common/Common8.png" id="9_d8khf"]
+[ext_resource type="Texture2D" uid="uid://d0x6yooidn54c" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1.png" id="10_cq570"]
+[ext_resource type="Texture2D" uid="uid://cre7nesnqxx1l" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 1.png" id="11_ei5m7"]
+[ext_resource type="Texture2D" uid="uid://tr43unuv2d0l" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 2.png" id="12_s02rx"]
+[ext_resource type="Texture2D" uid="uid://dlohk2h518sct" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 3.png" id="13_hbx4f"]
+[ext_resource type="Texture2D" uid="uid://qy714vobme5s" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 4.png" id="14_o4bri"]
+[ext_resource type="Texture2D" uid="uid://c0enrppeop8ju" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 5.png" id="15_l26cf"]
+[ext_resource type="Texture2D" uid="uid://d5sp52b1rk6o" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 6.png" id="16_b8bvl"]
+[ext_resource type="Texture2D" uid="uid://b1w66gewugq4f" path="res://Assets/Chests/Rare Lv. 1/Rare Lv 1, 7.png" id="17_os0ki"]
+[ext_resource type="Texture2D" uid="uid://dgdhh33yplu4i" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2.png" id="18_seaxo"]
+[ext_resource type="Texture2D" uid="uid://klrhqdd0o6q8" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 1.png" id="19_2e6io"]
+[ext_resource type="Texture2D" uid="uid://cer6qelvfp2ov" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 2.png" id="20_n8trs"]
+[ext_resource type="Texture2D" uid="uid://bqj2l32k6foei" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 3.png" id="21_t4ial"]
+[ext_resource type="Texture2D" uid="uid://c35c1rekfaeni" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 4.png" id="22_2ayyd"]
+[ext_resource type="Texture2D" uid="uid://6yok3wcxfvnm" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 5.png" id="23_re8vx"]
+[ext_resource type="Texture2D" uid="uid://bsmlfce6uhd1h" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 6.png" id="24_bxxr5"]
+[ext_resource type="Texture2D" uid="uid://cayp311tpbgb8" path="res://Assets/Chests/Rare Lv. 2/Rare Lv 2, 7.png" id="25_lpl0i"]
+[ext_resource type="Texture2D" uid="uid://3ha83wjc6hkd" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3.png" id="26_gqsxk"]
+[ext_resource type="Texture2D" uid="uid://bred5yvj4a1sb" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 1.png" id="27_lsi7k"]
+[ext_resource type="Texture2D" uid="uid://bhisnjl56atbv" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 2.png" id="28_t4llx"]
+[ext_resource type="Texture2D" uid="uid://cx3bmqo7iav0v" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 3.png" id="29_bpgrg"]
+[ext_resource type="Texture2D" uid="uid://b31apvnx6lo81" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 4.png" id="30_7lpyd"]
+[ext_resource type="Texture2D" uid="uid://cljjngjt5ln0v" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 5.png" id="31_bu221"]
+[ext_resource type="Texture2D" uid="uid://whbyrnadgh5k" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 6.png" id="32_y8gc4"]
+[ext_resource type="Texture2D" uid="uid://dwfqgcgts8si6" path="res://Assets/Chests/Rare Lv. 3/Rare Lv 3, 7.png" id="33_j5812"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_h0uop")
+"texture": ExtResource("2_pwnat")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_s1bj6")
+"texture": ExtResource("3_bt3rj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dh5l7")
+"texture": ExtResource("4_yfbwb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_pwnat")
+"texture": ExtResource("5_ckji1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_bt3rj")
+"texture": ExtResource("6_f5vny")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_yfbwb")
+"texture": ExtResource("8_mk61x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cu8i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d8khf")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18beg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cq570")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ei5m7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s02rx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hbx4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o4bri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_l26cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_b8bvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_os0ki")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_msv3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_seaxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2e6io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n8trs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t4ial")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2ayyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_re8vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bxxr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lpl0i")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejngw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gqsxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_lsi7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_t4llx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bpgrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7lpyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_bu221")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_y8gc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_j5812")
 }],
 "loop": 0,
 "name": &"open",
@@ -35,12 +163,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
-radius = 49.09175
+radius = 64.0
 
-[node name="Loot" type="Node2D" unique_id=2044874284]
+[node name="Loot" type="Node2D" unique_id=2044874284 node_paths=PackedStringArray("sprites")]
 script = ExtResource("1_s1bj6")
+sprites = [NodePath("Sprite C"), NodePath("Sprite L1"), NodePath("Sprite L2"), NodePath("Sprite L3")]
 
 [node name="Label" type="Label" parent="." unique_id=2017636638]
+z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -55,8 +185,29 @@ grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=148937932]
+[node name="Sprite C" type="AnimatedSprite2D" parent="." unique_id=148937932]
+visible = false
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_5xaec")
+animation = &"open"
+frame_progress = 1.0
+
+[node name="Sprite L1" type="AnimatedSprite2D" parent="." unique_id=57306769]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_18beg")
+animation = &"open"
+
+[node name="Sprite L2" type="AnimatedSprite2D" parent="." unique_id=1873735168]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_msv3u")
+animation = &"open"
+
+[node name="Sprite L3" type="AnimatedSprite2D" parent="." unique_id=1204120053]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ejngw")
 animation = &"open"
 
 [node name="Open Area" type="Area2D" parent="." unique_id=1897614869]
@@ -64,4 +215,7 @@ animation = &"open"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Open Area" unique_id=507881357]
 shape = SubResource("CircleShape2D_5xaec")
 
-[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
+[connection signal="animation_finished" from="Sprite C" to="." method="_on_sprite_animation_finished"]
+[connection signal="animation_finished" from="Sprite L1" to="." method="_on_sprite_animation_finished"]
+[connection signal="animation_finished" from="Sprite L2" to="." method="_on_sprite_animation_finished"]
+[connection signal="animation_finished" from="Sprite L3" to="." method="_on_sprite_animation_finished"]

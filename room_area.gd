@@ -13,5 +13,5 @@ func _on_body_entered(body: Node2D) -> void:
 			print("eneming")
 			var enemy = enemy_scene.instantiate()
 			enemy.target = player
-			enemy.position = position
+			enemy.position = Vector2(randf_range(-2,2),randf_range(-2,2))
 			add_child.call_deferred(enemy)

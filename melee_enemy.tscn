@@ -251,7 +251,6 @@ texture_filter = 1
 position = Vector2(11, 1)
 sprite_frames = SubResource("SpriteFrames_5xaec")
 animation = &"idle"
-frame_progress = 0.2268833
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
 visible = false
