@@ -11,6 +11,7 @@ radius = 256.0
 script = ExtResource("1_g1h18")
 enemy_scene = ExtResource("2_hbxs6")
 ranged_enemy_scene = ExtResource("3_wbueg")
+metadata/area = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579786461]
 shape = SubResource("CircleShape2D_5xaec")

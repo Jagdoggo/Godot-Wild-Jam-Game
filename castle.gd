@@ -36,6 +36,7 @@ var dirs : Array[Vector2i] = [Vector2i.UP,Vector2i.DOWN,Vector2i.LEFT,Vector2i.R
 signal found_tile_index
 signal found_tile_side
 signal found_room
+signal finished
 
 func generate():
 	create_tile(Vector2i(0,0),rooms[0])
@@ -67,13 +68,14 @@ func generate():
 		for y in range(16):
 			castle_tiles.erase_cell(Vector2i(-8,-101)+Vector2i(x,y))
 			floor.set_cell(Vector2i(-8,-101)+Vector2i(x,y),0,Vector2i(6,0))
-	if Global.dungeon_level > 11:
+	if Global.dungeon_level > 9:
 		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(3))
 	else:
 		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(4))
 	await get_tree().physics_frame
 	nav_region.bake_navigation_polygon()
 	await nav_region.bake_finished
+	finished.emit()
 	print("fineished")
 
 func pick_tile():

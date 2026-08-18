@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 	velocity = input * speed
 	if ran_out_of_stamina:
 		stamina += delta * 8
+		health += delta * 2
 		inputC = false
 	else:
 		if not inputC:
@@ -73,8 +74,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	stamina_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_stam
-	health_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_health
+	stamina_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_stam
+	health_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_health
 
 func _on_flicker_timer_timeout() -> void:
 	point_light_2d.hide()

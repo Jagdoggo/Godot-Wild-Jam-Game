@@ -1,3 +1,104 @@
 [gd_scene format=3 uid="uid://c25vdvsggslum"]
 
+[ext_resource type="Texture2D" uid="uid://docmenrcx3beh" path="res://Assets/Placeholder Art.png" id="1_yfhrd"]
+[ext_resource type="Script" uid="uid://jar68f735yl0" path="res://trash_bot.gd" id="2_00rh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcfc"]
+size = Vector2(100, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xaec"]
+size = Vector2(60, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00rh5"]
+size = Vector2(44, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xaec"]
+radius = 200.0
+
+[sub_resource type="Gradient" id="Gradient_00rh5"]
+offsets = PackedFloat32Array(0, 0.999)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5xaec"]
+gradient = SubResource("Gradient_00rh5")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="TrashBot" type="Sprite2D" unique_id=36952351]
+texture_filter = 1
+texture = ExtResource("1_yfhrd")
+script = ExtResource("2_00rh5")
+
+[node name="Line Rotation" type="Node2D" parent="." unique_id=394022649]
+
+[node name="Death Line" type="Area2D" parent="Line Rotation" unique_id=673059543]
+visible = false
+position = Vector2(-200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line Rotation/Death Line" unique_id=2077984140]
+position = Vector2(100, 0)
+shape = SubResource("RectangleShape2D_5mcfc")
+
+[node name="Line2D" type="Line2D" parent="Line Rotation/Death Line" unique_id=142566014]
+points = PackedVector2Array(0, 0, 184, 0)
+default_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+
+[node name="Arm Rotation" type="Node2D" parent="." unique_id=1034360709]
+
+[node name="Death Zone" type="Area2D" parent="Arm Rotation" unique_id=966512908]
+position = Vector2(-200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arm Rotation/Death Zone" unique_id=1458237270]
+position = Vector2(30, 0)
+shape = SubResource("RectangleShape2D_5xaec")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Arm Rotation/Death Zone" unique_id=1242829185]
+position = Vector2(162, 0)
+shape = SubResource("RectangleShape2D_00rh5")
+
+[node name="Line2D" type="Line2D" parent="Arm Rotation/Death Zone" unique_id=1643982622]
+points = PackedVector2Array(0, 0, 60, 0)
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="Arm Rotation/Death Zone" unique_id=1774516745]
+points = PackedVector2Array(140, 0, 184, 0)
+default_color = Color(0, 0, 0, 1)
+
+[node name="Ram Area" type="Area2D" parent="." unique_id=824512519]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ram Area" unique_id=1366941599]
+shape = SubResource("CircleShape2D_sc62p")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=560057220]
+enabled = false
+
+[node name="Detect Area" type="Area2D" parent="." unique_id=2058079216]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Area" unique_id=229893792]
+shape = SubResource("CircleShape2D_5xaec")
+
+[node name="Hit Timer" type="Timer" parent="." unique_id=2123978299]
+
+[node name="Line Timer" type="Timer" parent="." unique_id=1334266643]
+wait_time = 5.0
+autostart = true
+
+[node name="Line Cooldown" type="Timer" parent="." unique_id=379197942]
+one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1497350108]
+scale = Vector2(16, 16)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_5xaec")
+
+[connection signal="body_entered" from="Line Rotation/Death Line" to="." method="_on_death_line_body_entered"]
+[connection signal="body_entered" from="Arm Rotation/Death Zone" to="." method="_on_death_zone_body_entered"]
+[connection signal="body_entered" from="Ram Area" to="." method="_on_ram_area_body_entered"]
+[connection signal="body_entered" from="Detect Area" to="." method="_on_detect_area_body_entered"]
+[connection signal="timeout" from="Hit Timer" to="." method="_on_hit_timer_timeout"]
+[connection signal="timeout" from="Line Timer" to="." method="_on_line_timer_timeout"]
+[connection signal="timeout" from="Line Cooldown" to="." method="_on_line_cooldown_timeout"]
