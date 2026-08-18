@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qiflj573d0n" path="res://Assets/Enemies/Army Man/ArmyManArrow.png" id="1_l5ahi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ndhl"]
-radius = 1.9999999
+radius = 1.0
 height = 34.0
 
 [node name="Arrow" type="Area2D" unique_id=945215839]
