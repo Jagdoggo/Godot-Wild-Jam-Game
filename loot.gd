@@ -9,8 +9,8 @@ extends Node2D
 var player : CharacterBody2D
 
 func _ready() -> void:
-	if loot_level <= sprites.size():
-		sprites[loot_level-1].visible = true
+	if loot_level/(Global.dungeon_level+1) <= sprites.size():
+		sprites[(loot_level/(Global.dungeon_level+1))-1].visible = true
 
 func _process(delta: float) -> void:
 	label.text = str(loot_level)
@@ -18,8 +18,8 @@ func _process(delta: float) -> void:
 		for body in open_area.get_overlapping_bodies():
 			if body.name == "Player":
 				player = body
-				if loot_level <= sprites.size():
-					sprites[loot_level-1].play("open")
+				if loot_level/(Global.dungeon_level+1) <= sprites.size():
+					sprites[(loot_level/(Global.dungeon_level+1))-1].play("open")
 
 func _on_sprite_animation_finished() -> void:
 	$SFX.play()
