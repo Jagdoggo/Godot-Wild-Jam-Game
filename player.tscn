@@ -193,4 +193,9 @@ wait_time = 10.0
 one_shot = true
 autostart = true
 
+[node name="Invincible Timer" type="Timer" parent="." unique_id=1365051353]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="timeout" from="Flicker Timer" to="." method="_on_flicker_timer_timeout"]
+[connection signal="timeout" from="Invincible Timer" to="." method="_on_invincible_timer_timeout"]
