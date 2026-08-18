@@ -187,3 +187,10 @@ show_percentage = false
 scale = Vector2(8, 8)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_q13i1")
+
+[node name="Flicker Timer" type="Timer" parent="." unique_id=1271546590]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Flicker Timer" to="." method="_on_flicker_timer_timeout"]

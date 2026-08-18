@@ -8,6 +8,8 @@ extends CharacterBody2D
 @onready var stamina_bar: ProgressBar = $"Camera2D/Stamina Bar"
 @onready var health_bar: ProgressBar = $"Camera2D/Health Bar"
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var flicker_timer: Timer = $"Flicker Timer"
+@onready var point_light_2d: PointLight2D = $PointLight2D
 
 var inputC : bool
 var stamina : float = 100
@@ -70,3 +72,9 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	stamina_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_stam
 	health_bar.position = camera_2d.get_screen_center_position() - global_position + bar_pos_health
+
+func _on_flicker_timer_timeout() -> void:
+	point_light_2d.hide()
+	await get_tree().create_timer(0.25).timeout
+	point_light_2d.show()
+	flicker_timer.start(randf_range(0,10))

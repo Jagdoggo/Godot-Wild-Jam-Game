@@ -188,6 +188,8 @@ func connect_tile(tile : current_tile,room : Room,side : int, iteration : int):
 	current_tiles.append(new_tile)
 
 func _ready() -> void:
+	if Global.dungeon_level != 0:
+		$Label.hide()
 	tileset = castle_tiles.tile_set
 	generate()
 
