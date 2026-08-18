@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		if not inputC:
 			stamina += delta * 16
-			health += delta * 4
+			health += delta * (4 + Global.dungeon_level / 2)
 	if inputC:
 		stamina += -delta * 64
 		sprite.speed_scale = 2
@@ -59,6 +59,7 @@ func _physics_process(delta: float) -> void:
 			speed = 250
 	if stamina > 100:
 		stamina = 100
+	if stamina > 50:
 		ran_out_of_stamina = false
 	if health > 100:
 		health = 100

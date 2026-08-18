@@ -134,7 +134,6 @@ fill_to = Vector2(1, 0.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1466057793]
 script = ExtResource("1_onrkg")
-cheating = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=100435110]
 shape = SubResource("CircleShape2D_231t4")

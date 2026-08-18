@@ -53,7 +53,7 @@ func generate():
 		if tile.room.is_loot_room and randi_range(1,loot_room_chance) == 1:
 			var loot = loot_scene.instantiate()
 			loot.position = (start_position+(tile.pos*4)+Vector2i(2,2)) * tileset.tile_size
-			loot.loot_level = ((tile.iteration / 500) + 1) * Global.dungeon_level + 1
+			loot.loot_level = (tile.iteration / 500) + 1
 			add_child(loot)
 		var area = room_area_scene.instantiate()
 		area.enemies = tile.iteration / 1000 + randi_range(-5,1)
