@@ -11,7 +11,7 @@ extends CharacterBody2D
 @onready var attack_area: Area2D = $"Attack Area"
 
 var status : Status
-var health : float = 8
+var health : float = 4
 
 var frame = 0
 
@@ -61,7 +61,7 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		health -= body.damage
 		var particles = kill_particles.instantiate()
 		particles.position = position
-		get_parent().add_child(particles)
+		get_parent().add_child.call_deferred(particles)
 		particles.emitting = true
 		if health <= 0:
 			particles.kill = true

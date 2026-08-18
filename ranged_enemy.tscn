@@ -32,7 +32,6 @@
 [ext_resource type="Texture2D" uid="uid://cihfjann4d2dv" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp2.png" id="28_l1o7d"]
 [ext_resource type="Texture2D" uid="uid://ds0mnv55wgx0u" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp3.png" id="29_xxudj"]
 [ext_resource type="Texture2D" uid="uid://bpoeabn2sgdko" path="res://Assets/Enemies/Army Man/Walking Up/ArmyManWalkingUp4.png" id="30_akn1l"]
-[ext_resource type="AudioStream" uid="uid://ihlreqv6md5i" path="res://Assets/Sounds/killed.wav" id="33_sdf6s"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4v3he"]
 animations = [{
@@ -72,7 +71,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack",
-"speed": 15.0
+"speed": 7.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -176,9 +175,9 @@ target_desired_distance = 160.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_4v3he")
-animation = &"idle"
-frame = 1
-frame_progress = 0.026931597
+animation = &"attack"
+frame = 10
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706200852]
 shape = SubResource("CircleShape2D_5xaec")
@@ -194,9 +193,6 @@ shape = SubResource("CircleShape2D_sc62p")
 shape = SubResource("CircleShape2D_1crab")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1203081628]
-
-[node name="KilledSFX" type="AudioStreamPlayer2D" parent="." unique_id=107052460]
-stream = ExtResource("33_sdf6s")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Ram Area" to="." method="_on_ram_area_body_entered"]

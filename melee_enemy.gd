@@ -69,5 +69,4 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		particles.emitting = true
 		if health <= 0:
 			particles.kill = true
-			print(particles.kill)
 			queue_free()
