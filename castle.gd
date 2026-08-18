@@ -67,7 +67,10 @@ func generate():
 		for y in range(16):
 			castle_tiles.erase_cell(Vector2i(-8,-101)+Vector2i(x,y))
 			floor.set_cell(Vector2i(-8,-101)+Vector2i(x,y),0,Vector2i(6,0))
-	castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(3))
+	if Global.dungeon_level > 11:
+		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(3))
+	else:
+		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(4))
 	await get_tree().physics_frame
 	nav_region.bake_navigation_polygon()
 	await nav_region.bake_finished
