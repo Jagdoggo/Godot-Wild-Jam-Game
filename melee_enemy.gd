@@ -55,8 +55,10 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 func _on_animated_sprite_2d_frame_changed() -> void:
 	if animated_sprite_2d.animation == "attack" and animated_sprite_2d.frame == 14:
 		for body in attack_area.get_overlapping_bodies():
-			if body.name == "Player":
+			if body.name == "Player" and !body.invincible:
 				body.health -= damage
+				body.invincible = true
+				body.invincible_timer.start()
 
 func _on_ram_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and body.inputC:

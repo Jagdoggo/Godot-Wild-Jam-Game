@@ -10,6 +10,7 @@ extends CharacterBody2D
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var flicker_timer: Timer = $"Flicker Timer"
 @onready var point_light_2d: PointLight2D = $PointLight2D
+@onready var invincible_timer: Timer = $"Invincible Timer"
 
 var inputC : bool
 var stamina : float = 100
@@ -17,6 +18,7 @@ var health : float = 100
 var ran_out_of_stamina : bool = false
 var bar_pos_stam : Vector2
 var bar_pos_health : Vector2
+var invincible : bool = false
 
 func _ready() -> void:
 	bar_pos_stam = stamina_bar.position
@@ -78,3 +80,6 @@ func _on_flicker_timer_timeout() -> void:
 	await get_tree().create_timer(0.25).timeout
 	point_light_2d.show()
 	flicker_timer.start(randf_range(0,10))
+
+func _on_invincible_timer_timeout() -> void:
+	invincible = false
