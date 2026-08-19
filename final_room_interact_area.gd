@@ -2,8 +2,10 @@ extends Area2D
 
 @export var enemy_scene : PackedScene
 @export var ranged_enemy_scene : PackedScene
-
 @export var count : int = 20
+
+@onready var time_machine_parts: AnimatedSprite2D = $"Time Machine Parts"
+@onready var time_machine: AnimatedSprite2D = $"Time Machine"
 
 var activated : bool = false
 var completed : bool = false
@@ -20,6 +22,11 @@ func _ready() -> void:
 		boss = load("res://trash_bot.tscn").instantiate()
 		boss.player = $"../Player"
 		add_child(boss)
+		boss.start.connect(start)
+		time_machine.show()
+	else:
+		time_machine_parts.frame = Global.dungeon_level
+		time_machine_parts.show()
 	is_ready = true
 
 func _process(delta: float) -> void:
@@ -64,3 +71,9 @@ func _process(delta: float) -> void:
 			completed = true
 			$"Sucess SFX".play()
 			$Label.show()
+
+func start():
+	time_machine.play("default")
+
+func _on_time_machine_animation_finished() -> void:
+	get_tree().paused = true

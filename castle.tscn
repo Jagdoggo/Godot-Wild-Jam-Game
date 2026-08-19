@@ -22,6 +22,83 @@
 [ext_resource type="Script" uid="uid://b43jwkj0oqg1g" path="res://final_room_interact_area.gd" id="17_aoeh4"]
 [ext_resource type="PackedScene" uid="uid://c2scnmsq3qe5n" path="res://ranged_enemy.tscn" id="19_wx51g"]
 [ext_resource type="AudioStream" uid="uid://brwgb3xitjp4b" path="res://Assets/Sounds/sucess.wav" id="21_8nkow"]
+[ext_resource type="Texture2D" uid="uid://b8wwlki0crufu" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts1.png" id="23_tifd4"]
+[ext_resource type="Texture2D" uid="uid://lovep6uox606" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts2.png" id="24_1wnlx"]
+[ext_resource type="Texture2D" uid="uid://c7ybg1r4dp67u" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts3.png" id="25_jqiew"]
+[ext_resource type="Texture2D" uid="uid://c1xphgslh6scn" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts4.png" id="26_cp6gu"]
+[ext_resource type="Texture2D" uid="uid://7ympoc1x3wgl" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts5.png" id="27_amr8p"]
+[ext_resource type="Texture2D" uid="uid://3ll5pxdw2ci6" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts6.png" id="28_o55q5"]
+[ext_resource type="Texture2D" uid="uid://dtqbg5513t3mv" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts7.png" id="29_2nhnl"]
+[ext_resource type="Texture2D" uid="uid://xh4oid5ch7an" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts8.png" id="30_p0a4y"]
+[ext_resource type="Texture2D" uid="uid://c2m76vl20wq1o" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts9.png" id="31_obex4"]
+[ext_resource type="Texture2D" uid="uid://np43arr8dkf3" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts10.png" id="32_e5qb3"]
+[ext_resource type="Texture2D" uid="uid://b2b3deashbin" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation1.png" id="33_eb0e7"]
+[ext_resource type="Texture2D" uid="uid://difcauk4eclx2" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation2.png" id="34_cxnjq"]
+[ext_resource type="Texture2D" uid="uid://b24f8k51pc1pi" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation3.png" id="35_smntj"]
+[ext_resource type="Texture2D" uid="uid://bgu82hso08u3l" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation4.png" id="36_r0ewq"]
+[ext_resource type="Texture2D" uid="uid://d0bmpyrs3djjm" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation5.png" id="37_gketx"]
+[ext_resource type="Texture2D" uid="uid://bbtnhjwps1678" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation6.png" id="38_vcelp"]
+[ext_resource type="Texture2D" uid="uid://dsbhf62yejt8h" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation7.png" id="39_ivwna"]
+[ext_resource type="Texture2D" uid="uid://cupislirl2f8w" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation8.png" id="40_u4xi4"]
+[ext_resource type="Texture2D" uid="uid://dj70h2crsx2hs" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation9.png" id="41_i5tyr"]
+[ext_resource type="Texture2D" uid="uid://chefyd152h1ji" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation10.png" id="42_0lk0u"]
+[ext_resource type="Texture2D" uid="uid://btwjgogtrl28w" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation11.png" id="43_13f7u"]
+[ext_resource type="Texture2D" uid="uid://bclbdcigsdu5y" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation12.png" id="44_um67m"]
+[ext_resource type="Texture2D" uid="uid://dhp63rcblcmj0" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation13.png" id="45_emsxd"]
+[ext_resource type="Texture2D" uid="uid://b4tu5rf8s7b3e" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation14.png" id="46_o6w3e"]
+[ext_resource type="Texture2D" uid="uid://b5ok36jep0tml" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation15.png" id="47_iyyqr"]
+[ext_resource type="Texture2D" uid="uid://d2x0pdou1fsy1" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation16.png" id="48_b1etl"]
+[ext_resource type="Texture2D" uid="uid://cv3toy4e7n12x" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation17.png" id="49_yd6l6"]
+[ext_resource type="Texture2D" uid="uid://r34qb18quvu7" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation18.png" id="50_gemf5"]
+[ext_resource type="Texture2D" uid="uid://dvx8omfp3q2ra" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation19.png" id="51_3y8im"]
+[ext_resource type="Texture2D" uid="uid://b0f7sqeebtiqg" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation20.png" id="52_3hilb"]
+[ext_resource type="Texture2D" uid="uid://c2t7m4o13wjq7" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation21.png" id="53_bselp"]
+[ext_resource type="Texture2D" uid="uid://kvfe4v3e5f4f" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation22.png" id="54_uk2ns"]
+[ext_resource type="Texture2D" uid="uid://05foh328poxu" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation23.png" id="55_076l3"]
+[ext_resource type="Texture2D" uid="uid://cwhutfijkonro" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation24.png" id="56_r0o2x"]
+[ext_resource type="Texture2D" uid="uid://c80odeewjvui0" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation25.png" id="57_nxvip"]
+[ext_resource type="Texture2D" uid="uid://bgoyltnt6mu1f" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation26.png" id="58_8t8qr"]
+[ext_resource type="Texture2D" uid="uid://xworcb7eymod" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation27.png" id="59_l7g5e"]
+[ext_resource type="Texture2D" uid="uid://cw1bxbmhblinh" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation28.png" id="60_g1kgd"]
+[ext_resource type="Texture2D" uid="uid://1lgcrbddiyc" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation29.png" id="61_5dtsa"]
+[ext_resource type="Texture2D" uid="uid://cm4jfy0ykjhro" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation30.png" id="62_io445"]
+[ext_resource type="Texture2D" uid="uid://c82ef0d20wr08" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation31.png" id="63_miyam"]
+[ext_resource type="Texture2D" uid="uid://b3qge5tpotqki" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation32.png" id="64_ao3hk"]
+[ext_resource type="Texture2D" uid="uid://bhm5cl1r6dhrh" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation33.png" id="65_ose6q"]
+[ext_resource type="Texture2D" uid="uid://xse233gsms1h" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation34.png" id="66_k3pma"]
+[ext_resource type="Texture2D" uid="uid://bqu7a8wd7oghf" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation35.png" id="67_pl3hd"]
+[ext_resource type="Texture2D" uid="uid://bfkfwxuifk5ei" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation36.png" id="68_eiscf"]
+[ext_resource type="Texture2D" uid="uid://b3jg06gswjp6r" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation37.png" id="69_t4g5p"]
+[ext_resource type="Texture2D" uid="uid://buf7bjrlj1efk" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation38.png" id="70_sulxw"]
+[ext_resource type="Texture2D" uid="uid://rugt0h5xovec" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation39.png" id="71_m0l1u"]
+[ext_resource type="Texture2D" uid="uid://dp7tx6owdibts" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation40.png" id="72_mupo7"]
+[ext_resource type="Texture2D" uid="uid://cl6hcvmvwn1sw" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation41.png" id="73_4vvtb"]
+[ext_resource type="Texture2D" uid="uid://dtpskp07vueil" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation42.png" id="74_5b3ug"]
+[ext_resource type="Texture2D" uid="uid://g851ikwbg4ss" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation43.png" id="75_7i3sy"]
+[ext_resource type="Texture2D" uid="uid://lfjn8hgcg7i5" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation44.png" id="76_as4ia"]
+[ext_resource type="Texture2D" uid="uid://cw8rvmjtkawr5" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation45.png" id="77_wqbys"]
+[ext_resource type="Texture2D" uid="uid://ccas7qf025pf5" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation46.png" id="78_mmsxf"]
+[ext_resource type="Texture2D" uid="uid://dvb5we8tbmv07" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation47.png" id="79_fu0ej"]
+[ext_resource type="Texture2D" uid="uid://cd5tvlhjfgb3u" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation48.png" id="80_acvil"]
+[ext_resource type="Texture2D" uid="uid://cq2eecux5xe6k" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation49.png" id="81_55mgi"]
+[ext_resource type="Texture2D" uid="uid://2vkgg72pypy1" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation50.png" id="82_g3d73"]
+[ext_resource type="Texture2D" uid="uid://3aebw8xl7hsm" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation51.png" id="83_topx0"]
+[ext_resource type="Texture2D" uid="uid://c7284l3fgoc0t" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation52.png" id="84_lesq2"]
+[ext_resource type="Texture2D" uid="uid://bnyyks7xbpas5" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation53.png" id="85_16y7f"]
+[ext_resource type="Texture2D" uid="uid://xvcqhmq1vxul" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation54.png" id="86_ykc1p"]
+[ext_resource type="Texture2D" uid="uid://c3i4sdape616v" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation55.png" id="87_0mmf4"]
+[ext_resource type="Texture2D" uid="uid://bi65wg1xu3r6w" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation56.png" id="88_e26ye"]
+[ext_resource type="Texture2D" uid="uid://bcrqveuhj3ees" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation57.png" id="89_jg2ba"]
+[ext_resource type="Texture2D" uid="uid://dw10m2qkd873i" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation58.png" id="90_c8rf6"]
+[ext_resource type="Texture2D" uid="uid://cibhojlbmpg18" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation59.png" id="91_6ui2u"]
+[ext_resource type="Texture2D" uid="uid://cmv7chknrkkp3" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation60.png" id="92_tcpqe"]
+[ext_resource type="Texture2D" uid="uid://yso3kpdmtqw1" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation61.png" id="93_vl0ae"]
+[ext_resource type="Texture2D" uid="uid://cy5tjnlthqmhj" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation62.png" id="94_f7rhb"]
+[ext_resource type="Texture2D" uid="uid://bvebow3heklxb" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation63.png" id="95_us0nk"]
+[ext_resource type="Texture2D" uid="uid://6x0uixtftf6a" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation64.png" id="96_53ft2"]
+[ext_resource type="Texture2D" uid="uid://g8ud0cy7djs8" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation65.png" id="97_bw4sl"]
+[ext_resource type="Texture2D" uid="uid://dsnqheeumv8qi" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation66.png" id="98_yjkpc"]
+[ext_resource type="Texture2D" uid="uid://cj4rsl6ak8m2g" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Animation/TimeMachineAnimation67.png" id="99_w0gdq"]
 
 [sub_resource type="Resource" id="Resource_vm22h"]
 script = ExtResource("2_t33uu")
@@ -269,6 +346,253 @@ pattern_4 = SubResource("TileMapPattern_fff46")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xaec"]
 size = Vector2(448, 448)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_tifd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1wnlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jqiew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cp6gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_amr8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_o55q5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2nhnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_p0a4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_obex4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_e5qb3")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sc62p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_eb0e7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_cxnjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_smntj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_r0ewq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_gketx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_vcelp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ivwna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_u4xi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_i5tyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_0lk0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_13f7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_um67m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_emsxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_o6w3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_iyyqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_b1etl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_yd6l6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_gemf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_3y8im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_3hilb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_bselp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_uk2ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_076l3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_r0o2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_nxvip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_8t8qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_l7g5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_g1kgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_5dtsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_io445")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_miyam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ao3hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ose6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_k3pma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_pl3hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_eiscf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_t4g5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_sulxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_m0l1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_mupo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_4vvtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_5b3ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7i3sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_as4ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_wqbys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_mmsxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_fu0ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_acvil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_55mgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_g3d73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_topx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_lesq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_16y7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_ykc1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_0mmf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_e26ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_jg2ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_c8rf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_6ui2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_tcpqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_vl0ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_f7rhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_us0nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_53ft2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_bw4sl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_yjkpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_w0gdq")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}]
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wx51g"]
 light_mode = 1
 
@@ -382,6 +706,22 @@ stream = ExtResource("21_8nkow")
 [node name="Start SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=1018628602]
 stream = ExtResource("15_r871a")
 
+[node name="Time Machine Parts" type="AnimatedSprite2D" parent="Final Room Interact Area" unique_id=1409088778]
+visible = false
+texture_filter = 1
+position = Vector2(-60, -54)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5xaec")
+
+[node name="Time Machine" type="AnimatedSprite2D" parent="Final Room Interact Area" unique_id=433069555]
+visible = false
+texture_filter = 1
+position = Vector2(173, 175)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_sc62p")
+frame = 66
+frame_progress = 1.0
+
 [node name="Ending room" type="Area2D" parent="." unique_id=1483314828]
 position = Vector2(0, 608)
 
@@ -427,4 +767,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="body_entered" from="DoorAnimation/DoorStaticBody/DoorArea" to="DoorAnimation" method="_on_door_area_body_entered"]
+[connection signal="animation_finished" from="Final Room Interact Area/Time Machine" to="Final Room Interact Area" method="_on_time_machine_animation_finished"]
 [connection signal="body_entered" from="Ending room" to="." method="_on_ending_room_body_entered"]

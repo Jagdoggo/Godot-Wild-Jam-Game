@@ -17,6 +17,8 @@ var line : bool = false
 var can_be_lined : bool = true
 var health : float = 3
 
+signal start
+
 func _process(delta: float) -> void:
 	line_timer.paused = !running
 	death_line.visible = line
@@ -34,6 +36,7 @@ func _process(delta: float) -> void:
 
 func _on_detect_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		start.emit()
 		running = true
 		camera_2d.global_position = player.position
 		player.camera_2d.enabled = false
