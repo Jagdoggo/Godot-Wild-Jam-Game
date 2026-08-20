@@ -49,6 +49,7 @@ points = PackedVector2Array(0, 0, 184, 0)
 default_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
 
 [node name="Arm Rotation" type="Node2D" parent="." unique_id=1034360709]
+rotation = 1.5707964
 
 [node name="Death Zone" type="Area2D" parent="Arm Rotation" unique_id=966512908]
 position = Vector2(-200, 0)
