@@ -6,6 +6,7 @@ extends Area2D
 
 @onready var time_machine_parts: AnimatedSprite2D = $"Time Machine Parts"
 @onready var time_machine: AnimatedSprite2D = $"Time Machine"
+@onready var w_l_text: Label = $"W L text"
 
 var activated : bool = false
 var completed : bool = false
@@ -67,6 +68,7 @@ func _process(delta: float) -> void:
 				completed = true
 	else:
 		if !boss and !completed:
+			$Camera2D.enabled = true
 			completed = true
 			$"Sucess SFX".play()
 			await get_tree().create_timer(3).timeout
@@ -76,4 +78,8 @@ func start():
 	time_machine.play("default")
 
 func _on_time_machine_animation_finished() -> void:
+	w_l_text.show()
+	if completed:
+		w_l_text.text = "Congratulations, you escaped through the time machine, after defeating the robot. You were happily welcomed back to your home in the future.
+THE END"
 	get_tree().paused = true

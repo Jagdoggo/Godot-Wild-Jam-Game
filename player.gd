@@ -80,8 +80,9 @@ func _process(delta: float) -> void:
 	castle_number.text = "Castle number: " + str(Global.dungeon_level + 1)
 	if was_playing != (get_viewport().get_camera_2d() == camera_2d):
 		main_music.playing = get_viewport().get_camera_2d() == camera_2d
-	stamina_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_stam
-	health_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_health
+	if get_viewport().get_camera_2d():
+		stamina_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_stam
+		health_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_health
 	was_playing = get_viewport().get_camera_2d() == camera_2d
 
 func _on_flicker_timer_timeout() -> void:

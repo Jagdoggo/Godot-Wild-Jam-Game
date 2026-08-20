@@ -61,11 +61,10 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		running = false
 		modulate = Color.RED
 		if health <= 0:
-			player.camera_2d.enabled = true
 			queue_free()
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and running:
 		body.health -= 50
 
 func _on_hit_timer_timeout() -> void:

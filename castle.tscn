@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://b43jwkj0oqg1g" path="res://final_room_interact_area.gd" id="17_aoeh4"]
 [ext_resource type="PackedScene" uid="uid://c2scnmsq3qe5n" path="res://ranged_enemy.tscn" id="19_wx51g"]
 [ext_resource type="AudioStream" uid="uid://brwgb3xitjp4b" path="res://Assets/Sounds/sucess.wav" id="21_8nkow"]
+[ext_resource type="FontFile" uid="uid://b7c64grgaa3xq" path="res://Assets/Micro5-Regular.ttf" id="22_cxnjq"]
 [ext_resource type="Texture2D" uid="uid://b8wwlki0crufu" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts1.png" id="23_tifd4"]
 [ext_resource type="Texture2D" uid="uid://lovep6uox606" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts2.png" id="24_1wnlx"]
 [ext_resource type="Texture2D" uid="uid://c7ybg1r4dp67u" path="res://Assets/Items Or Castle Items/Time Machine/Time Machine Parts/TimeMachineParts3.png" id="25_jqiew"]
@@ -346,6 +347,9 @@ pattern_4 = SubResource("TileMapPattern_fff46")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xaec"]
 size = Vector2(448, 448)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cxnjq"]
+light_mode = 1
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
 animations = [{
 "frames": [{
@@ -593,6 +597,9 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8qtwp"]
+light_mode = 1
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wx51g"]
 light_mode = 1
 
@@ -683,6 +690,8 @@ shape = SubResource("RectangleShape2D_5xaec")
 
 [node name="Label" type="Label" parent="Final Room Interact Area" unique_id=280392728]
 visible = false
+material = SubResource("CanvasItemMaterial_cxnjq")
+custom_minimum_size = Vector2(448, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -694,14 +703,16 @@ offset_right = 42.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 49
-text = "Completed,
-now exit the castle"
+theme_override_fonts/font = ExtResource("22_cxnjq")
+theme_override_font_sizes/font_size = 61
+text = "You have acquired a time machine fragment. Exit the castle to go to the next castle to get more fragments"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Sucess SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=587656129]
 process_mode = 3
+visible = false
 stream = ExtResource("21_8nkow")
 
 [node name="Start SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=1018628602]
@@ -723,6 +734,31 @@ sprite_frames = SubResource("SpriteFrames_sc62p")
 frame = 66
 frame_progress = 1.0
 
+[node name="W L text" type="Label" parent="Final Room Interact Area" unique_id=1465400436]
+visible = false
+material = SubResource("CanvasItemMaterial_8qtwp")
+custom_minimum_size = Vector2(448, 448)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -11.5
+offset_right = 24.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("22_cxnjq")
+theme_override_font_sizes/font_size = 31
+text = "You escaped through the time machine, but so did the robot. It was brought back to your home in the future and it rampaged through your home world.
+THE END"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="Final Room Interact Area" unique_id=1258741603]
+enabled = false
+
 [node name="Ending room" type="Area2D" parent="." unique_id=1483314828]
 position = Vector2(0, 608)
 
@@ -739,6 +775,7 @@ offset_right = 222.0
 offset_bottom = -189.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("22_cxnjq")
 theme_override_font_sizes/font_size = 38
 text = "Exit(once castle is done)"
 horizontal_alignment = 1
@@ -748,24 +785,26 @@ vertical_alignment = 1
 shape = SubResource("RectangleShape2D_wx51g")
 
 [node name="Label" type="Label" parent="." unique_id=1115702287]
+texture_filter = 1
 material = SubResource("CanvasItemMaterial_wx51g")
+custom_minimum_size = Vector2(283.435, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -421.0
-offset_top = 82.0
-offset_right = 421.0
-offset_bottom = 247.0
+offset_left = -141.717
+offset_top = 134.97
+offset_right = 141.718
+offset_bottom = 264.97
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("22_cxnjq")
 theme_override_font_sizes/font_size = 15
-text = "Press Shift/X to open/interact,
-Press Ctrl/Z to ram/charge, do this to enemies
-to see what happens. Now explore the castle."
+text = "You have been accidentally been trasported back inb time and taken away from your happy life in the future as a robot ram. Collect the time machine fragments in a special room of each castle so you can make it back to your home. Press Shift/X to open/interact,Press Ctrl/Z to ram/charge, do this to enemies to see what happens. Now explore the castle."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="body_entered" from="DoorAnimation/DoorStaticBody/DoorArea" to="DoorAnimation" method="_on_door_area_body_entered"]
 [connection signal="animation_finished" from="Final Room Interact Area/Time Machine" to="Final Room Interact Area" method="_on_time_machine_animation_finished"]
