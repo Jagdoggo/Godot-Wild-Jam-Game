@@ -11,6 +11,7 @@ extends CharacterBody2D
 @onready var flicker_timer: Timer = $"Flicker Timer"
 @onready var point_light_2d: PointLight2D = $PointLight2D
 @onready var invincible_timer: Timer = $"Invincible Timer"
+@onready var main_music: AudioStreamPlayer2D = $"Main Music"
 
 var inputC : bool
 var stamina : float = 100
@@ -19,6 +20,7 @@ var ran_out_of_stamina : bool = false
 var bar_pos_stam : Vector2
 var bar_pos_health : Vector2
 var invincible : bool = false
+var was_playing : bool
 
 func _ready() -> void:
 	bar_pos_stam = stamina_bar.position
@@ -74,8 +76,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	if was_playing != (get_viewport().get_camera_2d() == camera_2d):
+		main_music.playing = get_viewport().get_camera_2d() == camera_2d
 	stamina_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_stam
 	health_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_health
+	was_playing = get_viewport().get_camera_2d() == camera_2d
 
 func _on_flicker_timer_timeout() -> void:
 	point_light_2d.hide()

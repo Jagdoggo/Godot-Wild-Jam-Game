@@ -10,6 +10,7 @@ extends Sprite2D
 @onready var line_rotation: Node2D = $"Line Rotation"
 @onready var line_cooldown: Timer = $"Line Cooldown"
 @onready var line_timer: Timer = $"Line Timer"
+@onready var music: AudioStreamPlayer2D = $Music
 
 var last_positions : Array[Vector2]
 var running : bool = false
@@ -36,6 +37,7 @@ func _process(delta: float) -> void:
 
 func _on_detect_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		music.play()
 		start.emit()
 		running = true
 		camera_2d.global_position = player.position

@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://mqfvd3ve6tpg" path="res://Assets/PlayerSprites/PlayerUpAnimation2.png" id="15_j5n4i"]
 [ext_resource type="Texture2D" uid="uid://b2snwrvknkog2" path="res://Assets/PlayerSprites/PlayerUpAnimation3.png" id="16_634y6"]
 [ext_resource type="Texture2D" uid="uid://dgoquy7wbqmxv" path="res://Assets/PlayerSprites/PlayerUpAnimation4.png" id="17_efrwb"]
+[ext_resource type="AudioStream" uid="uid://bsvf6e3mwl88e" path="res://Assets/Sounds/RAMpage_dungeon_OST.mp3" id="18_q13i1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_231t4"]
 radius = 14.0
@@ -196,6 +197,10 @@ autostart = true
 [node name="Invincible Timer" type="Timer" parent="." unique_id=1365051353]
 wait_time = 0.5
 one_shot = true
+
+[node name="Main Music" type="AudioStreamPlayer2D" parent="." unique_id=827779480]
+stream = ExtResource("18_q13i1")
+volume_db = 1.0
 
 [connection signal="timeout" from="Flicker Timer" to="." method="_on_flicker_timer_timeout"]
 [connection signal="timeout" from="Invincible Timer" to="." method="_on_invincible_timer_timeout"]

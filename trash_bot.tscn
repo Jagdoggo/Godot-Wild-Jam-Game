@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://docmenrcx3beh" path="res://Assets/Placeholder Art.png" id="1_yfhrd"]
 [ext_resource type="Script" uid="uid://jar68f735yl0" path="res://trash_bot.gd" id="2_00rh5"]
+[ext_resource type="AudioStream" uid="uid://ek1i4pcco1xj" path="res://Assets/Sounds/RAMpage_boss_OST.mp3" id="3_5mcfc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcfc"]
 size = Vector2(100, 20)
@@ -94,6 +95,9 @@ one_shot = true
 scale = Vector2(16, 16)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_5xaec")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=61339386]
+stream = ExtResource("3_5mcfc")
 
 [connection signal="body_entered" from="Line Rotation/Death Line" to="." method="_on_death_line_body_entered"]
 [connection signal="body_entered" from="Arm Rotation/Death Zone" to="." method="_on_death_zone_body_entered"]
