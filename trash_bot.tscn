@@ -108,7 +108,7 @@ texture = SubResource("GradientTexture2D_5xaec")
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=61339386]
 stream = ExtResource("3_5mcfc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1534602304]
+[node name="Hit Indicator" type="Sprite2D" parent="." unique_id=1534602304]
 texture_filter = 1
 texture = ExtResource("6_8dthv")
 

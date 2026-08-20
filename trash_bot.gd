@@ -11,12 +11,14 @@ extends Sprite2D
 @onready var line_cooldown: Timer = $"Line Cooldown"
 @onready var line_timer: Timer = $"Line Timer"
 @onready var music: AudioStreamPlayer2D = $Music
+@onready var hit_indicator: Sprite2D = $"Hit Indicator"
 
 var last_positions : Array[Vector2]
 var running : bool = false
 var line : bool = false
 var can_be_lined : bool = true
 var health : float = 3
+var hit : int = 0
 
 signal start
 
@@ -47,7 +49,9 @@ func _on_detect_area_body_entered(body: Node2D) -> void:
 		tween.tween_property(camera_2d,"position",Vector2.ZERO,3)
 
 func _on_ram_area_body_entered(body: Node2D) -> void:
-	if body.name == "Player" and body.inputC and running:
+	if body.name == "Player" and body.inputC and running and hit_indicator.visible:
+		hit = 0
+		hit_indicator.hide()
 		body.health = 100
 		health -= 1
 		hit_timer.start()
@@ -66,6 +70,9 @@ func _on_hit_timer_timeout() -> void:
 	running = true
 
 func _on_line_timer_timeout() -> void:
+	hit += 1
+	if hit == 2:
+		hit_indicator.show()
 	line = !line
 
 func _on_line_cooldown_timeout() -> void:
