@@ -12,6 +12,7 @@ extends CharacterBody2D
 @onready var point_light_2d: PointLight2D = $PointLight2D
 @onready var invincible_timer: Timer = $"Invincible Timer"
 @onready var main_music: AudioStreamPlayer2D = $"Main Music"
+@onready var castle_number: Label = $"Camera2D/Castle Number"
 
 var inputC : bool
 var stamina : float = 100
@@ -76,6 +77,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	castle_number.text = "Castle number: " + str(Global.dungeon_level + 1)
 	if was_playing != (get_viewport().get_camera_2d() == camera_2d):
 		main_music.playing = get_viewport().get_camera_2d() == camera_2d
 	stamina_bar.position = get_viewport().get_camera_2d().get_screen_center_position() - global_position + bar_pos_stam

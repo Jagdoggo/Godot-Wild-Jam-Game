@@ -20,19 +20,23 @@ script = ExtResource("1_qe12f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1876072770]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -53.0
-offset_right = 53.0
-offset_bottom = 110.0
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -154.5
+offset_right = 140.0
+offset_bottom = 154.5
 grow_horizontal = 2
-scale = Vector2(4, 4)
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1055834224]
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8qtwp")
+theme_override_font_sizes/font_size = 64
 text = "RAMpage"
 
 [node name="Play" type="TextureButton" parent="VBoxContainer" unique_id=1487554848]
@@ -51,10 +55,10 @@ texture_hover = ExtResource("6_8qtwp")
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=689690249]
 texture_filter = 1
-custom_minimum_size = Vector2(105.755, 36.585)
+custom_minimum_size = Vector2(279.275, 79.775)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8qtwp")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 19
 placeholder_text = "Castle number(if you have played before)"
 wrap_mode = 1
 

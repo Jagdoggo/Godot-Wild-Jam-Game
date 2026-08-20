@@ -17,7 +17,7 @@ var last_positions : Array[Vector2]
 var running : bool = false
 var line : bool = false
 var can_be_lined : bool = true
-var health : float = 3
+var health : float = 5
 var hit : int = 0
 
 signal start
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	if can_be_lined and death_line.overlaps_body(player):
 		line_cooldown.start()
 		can_be_lined = false
-		player.health -= 12.5
+		player.health -= 25
 	if running:
 		arm_rotation.rotation_degrees += 5
 
@@ -43,10 +43,13 @@ func _on_detect_area_body_entered(body: Node2D) -> void:
 		start.emit()
 		running = true
 		camera_2d.global_position = player.position
+		camera_2d.zoom = Vector2(2,2)
 		player.camera_2d.enabled = false
 		camera_2d.enabled = true
 		var tween = get_tree().create_tween()
 		tween.tween_property(camera_2d,"position",Vector2.ZERO,3)
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(camera_2d,"zoom",Vector2.ONE,3)
 
 func _on_ram_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and body.inputC and running and hit_indicator.visible:
@@ -63,9 +66,10 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		body.health -= 25
+		body.health -= 50
 
 func _on_hit_timer_timeout() -> void:
+	player.health = 100
 	modulate = Color.WHITE
 	running = true
 
