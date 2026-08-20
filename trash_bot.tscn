@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://c25vdvsggslum"]
 
-[ext_resource type="Texture2D" uid="uid://docmenrcx3beh" path="res://Assets/Placeholder Art.png" id="1_yfhrd"]
+[ext_resource type="Texture2D" uid="uid://dr0v55ifig1pf" path="res://Assets/Bosses/Trash Ball/TrashBallBody.png" id="1_fsda7"]
 [ext_resource type="Script" uid="uid://jar68f735yl0" path="res://trash_bot.gd" id="2_00rh5"]
 [ext_resource type="AudioStream" uid="uid://ek1i4pcco1xj" path="res://Assets/Sounds/RAMpage_boss_OST.mp3" id="3_5mcfc"]
+[ext_resource type="Texture2D" uid="uid://g3kk3knqvqpf" path="res://Assets/Bosses/Trash Ball/DELTALASER.png" id="3_f2qku"]
+[ext_resource type="Texture2D" uid="uid://d4h30kmjcl0m7" path="res://Assets/Bosses/Trash Ball/DELTAARM.png" id="4_pyx8q"]
+[ext_resource type="Texture2D" uid="uid://bb3glup5f5ewx" path="res://Assets/Bosses/Trash Ball/TrashBallEye.png" id="6_8dthv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcfc"]
-size = Vector2(100, 20)
+size = Vector2(200, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xaec"]
 size = Vector2(60, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00rh5"]
-size = Vector2(44, 20)
+size = Vector2(60, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sc62p"]
 radius = 16.0
@@ -31,7 +34,7 @@ fill_to = Vector2(1, 0.5)
 
 [node name="TrashBot" type="Sprite2D" unique_id=36952351]
 texture_filter = 1
-texture = ExtResource("1_yfhrd")
+texture = ExtResource("1_fsda7")
 script = ExtResource("2_00rh5")
 
 [node name="Line Rotation" type="Node2D" parent="." unique_id=394022649]
@@ -44,9 +47,9 @@ position = Vector2(-200, 0)
 position = Vector2(100, 0)
 shape = SubResource("RectangleShape2D_5mcfc")
 
-[node name="Line2D" type="Line2D" parent="Line Rotation/Death Line" unique_id=142566014]
-points = PackedVector2Array(0, 0, 184, 0)
-default_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Line Rotation/Death Line" unique_id=1731602363]
+position = Vector2(100, 0)
+texture = ExtResource("3_f2qku")
 
 [node name="Arm Rotation" type="Node2D" parent="." unique_id=1034360709]
 rotation = 1.5707964
@@ -59,7 +62,7 @@ position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_5xaec")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Arm Rotation/Death Zone" unique_id=1242829185]
-position = Vector2(162, 0)
+position = Vector2(170, -1.1368684e-13)
 shape = SubResource("RectangleShape2D_00rh5")
 
 [node name="Line2D" type="Line2D" parent="Arm Rotation/Death Zone" unique_id=1643982622]
@@ -69,6 +72,11 @@ default_color = Color(0, 0, 0, 1)
 [node name="Line2D2" type="Line2D" parent="Arm Rotation/Death Zone" unique_id=1774516745]
 points = PackedVector2Array(140, 0, 184, 0)
 default_color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Arm Rotation/Death Zone" unique_id=125263175]
+position = Vector2(100, 0)
+rotation = 3.1415927
+texture = ExtResource("4_pyx8q")
 
 [node name="Ram Area" type="Area2D" parent="." unique_id=824512519]
 
@@ -99,6 +107,10 @@ texture = SubResource("GradientTexture2D_5xaec")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=61339386]
 stream = ExtResource("3_5mcfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1534602304]
+texture_filter = 1
+texture = ExtResource("6_8dthv")
 
 [connection signal="body_entered" from="Line Rotation/Death Line" to="." method="_on_death_line_body_entered"]
 [connection signal="body_entered" from="Arm Rotation/Death Zone" to="." method="_on_death_zone_body_entered"]
