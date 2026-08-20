@@ -701,6 +701,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sucess SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=587656129]
+process_mode = 3
 stream = ExtResource("21_8nkow")
 
 [node name="Start SFX" type="AudioStreamPlayer2D" parent="Final Room Interact Area" unique_id=1018628602]

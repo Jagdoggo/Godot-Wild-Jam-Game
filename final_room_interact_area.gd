@@ -67,10 +67,10 @@ func _process(delta: float) -> void:
 				completed = true
 	else:
 		if !boss and !completed:
-			print("TRASHBOT")
 			completed = true
 			$"Sucess SFX".play()
-			$Label.show()
+			await get_tree().create_timer(3).timeout
+			_on_time_machine_animation_finished()
 
 func start():
 	time_machine.play("default")
