@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://mqfvd3ve6tpg" path="res://Assets/PlayerSprites/PlayerUpAnimation2.png" id="15_j5n4i"]
 [ext_resource type="Texture2D" uid="uid://b2snwrvknkog2" path="res://Assets/PlayerSprites/PlayerUpAnimation3.png" id="16_634y6"]
 [ext_resource type="Texture2D" uid="uid://dgoquy7wbqmxv" path="res://Assets/PlayerSprites/PlayerUpAnimation4.png" id="17_efrwb"]
+[ext_resource type="FontFile" uid="uid://b7c64grgaa3xq" path="res://Assets/Micro5-Regular.ttf" id="18_pylmc"]
 [ext_resource type="AudioStream" uid="uid://bsvf6e3mwl88e" path="res://Assets/Sounds/RAMpage_dungeon_OST.mp3" id="18_q13i1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_231t4"]
@@ -189,6 +190,7 @@ show_percentage = false
 
 [node name="Castle Number" type="Label" parent="Camera2D" unique_id=1917124544]
 z_index = 1
+texture_filter = 1
 material = SubResource("CanvasItemMaterial_q13i1")
 anchors_preset = 7
 anchor_left = 0.5
@@ -201,7 +203,8 @@ offset_right = 20.0
 offset_bottom = 162.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 7
+theme_override_fonts/font = ExtResource("18_pylmc")
+theme_override_font_sizes/font_size = 13
 text = "Castle number: "
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -9,11 +9,11 @@ extends Node2D
 var player : CharacterBody2D
 
 func _ready() -> void:
+	label.text = "+" + str(loot_level) + " Damage"
 	if loot_level <= sprites.size():
 		sprites[loot_level-1].visible = true
 
 func _process(delta: float) -> void:
-	label.text = str(loot_level)
 	if Input.is_action_just_pressed("Action"):
 		for body in open_area.get_overlapping_bodies():
 			if body.name == "Player":
@@ -23,5 +23,6 @@ func _process(delta: float) -> void:
 
 func _on_sprite_animation_finished() -> void:
 	$SFX.play()
+	label.show()
 	player.damage += float(loot_level)/8
 	process_mode = Node.PROCESS_MODE_DISABLED
