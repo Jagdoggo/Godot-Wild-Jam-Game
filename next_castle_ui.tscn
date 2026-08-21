@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dve4sabsm37gq" path="res://Assets/Buttons/NextCastleButton1.png" id="2_kw517"]
 [ext_resource type="Texture2D" uid="uid://bxr554uxrbrd4" path="res://Assets/Buttons/NextCastleButton3.png" id="3_wd8n3"]
 [ext_resource type="Texture2D" uid="uid://dnesolhrm7vfl" path="res://Assets/Buttons/NextCastleButton2.png" id="4_64yd7"]
+[ext_resource type="Texture2D" uid="uid://ba1r0owiotcx4" path="res://Assets/Buttons/QuestButton1.png" id="5_mpc68"]
+[ext_resource type="Texture2D" uid="uid://ofpi8ms2bioe" path="res://Assets/Buttons/QuestButton3.png" id="6_yrkib"]
+[ext_resource type="Texture2D" uid="uid://cp3ik7ff2hhqy" path="res://Assets/Buttons/QuestButton2.png" id="7_rb5ig"]
 
 [node name="Next castle ui" type="Control" unique_id=262847755]
 layout_mode = 3
@@ -32,4 +35,17 @@ texture_normal = ExtResource("2_kw517")
 texture_pressed = ExtResource("3_wd8n3")
 texture_hover = ExtResource("4_64yd7")
 
+[node name="Quit" type="TextureButton" parent="." unique_id=1106049030]
+texture_filter = 1
+layout_mode = 0
+offset_left = 676.0
+offset_top = 373.0
+offset_right = 872.0
+offset_bottom = 449.0
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_mpc68")
+texture_pressed = ExtResource("6_yrkib")
+texture_hover = ExtResource("7_rb5ig")
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
