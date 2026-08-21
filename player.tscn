@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://mqfvd3ve6tpg" path="res://Assets/PlayerSprites/PlayerUpAnimation2.png" id="15_j5n4i"]
 [ext_resource type="Texture2D" uid="uid://b2snwrvknkog2" path="res://Assets/PlayerSprites/PlayerUpAnimation3.png" id="16_634y6"]
 [ext_resource type="Texture2D" uid="uid://dgoquy7wbqmxv" path="res://Assets/PlayerSprites/PlayerUpAnimation4.png" id="17_efrwb"]
+[ext_resource type="Texture2D" uid="uid://b1ytstutgk8eb" path="res://Assets/Buttons/BarOverlay.png" id="18_pbfsw"]
 [ext_resource type="FontFile" uid="uid://b7c64grgaa3xq" path="res://Assets/Micro5-Regular.ttf" id="18_pylmc"]
 [ext_resource type="AudioStream" uid="uid://bsvf6e3mwl88e" path="res://Assets/Sounds/RAMpage_dungeon_OST.mp3" id="18_q13i1"]
 
@@ -94,6 +95,9 @@ animations = [{
 "speed": 7.5
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q13i1"]
+light_mode = 1
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_op7ga"]
 light_mode = 1
 
@@ -125,9 +129,6 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q13i1"]
-light_mode = 1
-
 [sub_resource type="Gradient" id="Gradient_op7ga"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
@@ -152,6 +153,39 @@ animation = &"walk up"
 ignore_rotation = false
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="Stamina Bar Overlay" type="Sprite2D" parent="Camera2D" unique_id=714117431]
+texture_filter = 1
+position = Vector2(200, 140.00002)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("18_pbfsw")
+
+[node name="Health Bar Overlay" type="Sprite2D" parent="Camera2D" unique_id=1366994700]
+texture_filter = 1
+position = Vector2(-201.00002, 140.00002)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("18_pbfsw")
+
+[node name="Castle Number" type="Label" parent="Camera2D" unique_id=1917124544]
+z_index = 1
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_q13i1")
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 139.0
+offset_right = 20.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("18_pylmc")
+theme_override_font_sizes/font_size = 13
+text = "Castle number: "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Stamina Bar" type="ProgressBar" parent="Camera2D" unique_id=1684600142]
 z_index = 1
@@ -187,27 +221,6 @@ theme_override_styles/background = SubResource("StyleBoxFlat_pbfsw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_5tmop")
 value = 75.79
 show_percentage = false
-
-[node name="Castle Number" type="Label" parent="Camera2D" unique_id=1917124544]
-z_index = 1
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_q13i1")
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = 139.0
-offset_right = 20.0
-offset_bottom = 162.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("18_pylmc")
-theme_override_font_sizes/font_size = 13
-text = "Castle number: "
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1104431774]
 scale = Vector2(8, 8)
