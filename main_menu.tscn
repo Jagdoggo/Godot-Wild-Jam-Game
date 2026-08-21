@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dnvdgonh2gji3" path="res://Assets/Buttons/PlayButton1.png" id="1_fu7sn"]
 [ext_resource type="Script" uid="uid://c3d2gr26yo5k7" path="res://main_menu.gd" id="1_qe12f"]
 [ext_resource type="FontFile" uid="uid://b7c64grgaa3xq" path="res://Assets/Micro5-Regular.ttf" id="2_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://baq3opo0xr4l7" path="res://Assets/Buttons/MainMenuBackground1.png" id="2_dy7ct"]
 [ext_resource type="Texture2D" uid="uid://c0ccfqvx0womx" path="res://Assets/Buttons/PlayButton3.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bcqujdkdc45g7" path="res://Assets/RAMPAGE.png" id="3_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://d17a4v8ajqtd2" path="res://Assets/Buttons/PlayButton2.png" id="3_glbon"]
 [ext_resource type="Texture2D" uid="uid://ba1r0owiotcx4" path="res://Assets/Buttons/QuestButton1.png" id="4_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://ofpi8ms2bioe" path="res://Assets/Buttons/QuestButton3.png" id="5_qe12f"]
@@ -17,6 +19,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qe12f")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1533416444]
+texture_filter = 1
+position = Vector2(698.00006, 231)
+scale = Vector2(15, 15)
+texture = ExtResource("2_dy7ct")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1876072770]
 layout_mode = 1
@@ -32,12 +40,19 @@ offset_bottom = 154.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Logo" type="Sprite2D" parent="VBoxContainer" unique_id=1519048091]
+texture_filter = 1
+position = Vector2(145, 69)
+scale = Vector2(3, 3)
+texture = ExtResource("3_0o4t1")
+
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1055834224]
 texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_8qtwp")
 theme_override_font_sizes/font_size = 64
-text = "RAMpage"
+text = "
+"
 horizontal_alignment = 1
 
 [node name="RBP" type="Label" parent="VBoxContainer" unique_id=734616948]
