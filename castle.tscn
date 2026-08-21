@@ -751,7 +751,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("22_cxnjq")
 theme_override_font_sizes/font_size = 31
-text = "You escaped through the time machine, but so did the robot. It was brought back to your home in the future and it rampaged through your home world.
+text = "You took too long and escaped through the time machine, but so did the robot. It was brought back to your home in the future and it rampaged through your home world.
 THE END"
 horizontal_alignment = 1
 autowrap_mode = 3

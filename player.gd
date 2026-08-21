@@ -34,6 +34,8 @@ func _ready() -> void:
 	bar_pos_health2 = health_bar_overlay.position
 
 func _physics_process(delta: float) -> void:
+	if $Label:
+		$Label.queue_free()
 	if cheating:
 		health = 100
 	var input = Input.get_vector("Left","Right","Up","Down")
