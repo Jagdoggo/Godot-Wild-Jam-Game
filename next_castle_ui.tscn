@@ -17,35 +17,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ue11y")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1765994600]
-texture_filter = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1705610205]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.5
-offset_top = -20.0
-offset_right = 24.5
-offset_bottom = 20.0
+offset_left = -98.0
+offset_top = -78.0
+offset_right = 98.0
+offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer" unique_id=1765994600]
+texture_filter = 1
+layout_mode = 2
 texture_normal = ExtResource("2_kw517")
 texture_pressed = ExtResource("3_wd8n3")
 texture_hover = ExtResource("4_64yd7")
 
-[node name="Quit" type="TextureButton" parent="." unique_id=1106049030]
+[node name="Quit" type="TextureButton" parent="VBoxContainer" unique_id=1106049030]
 texture_filter = 1
-layout_mode = 0
-offset_left = 676.0
-offset_top = 373.0
-offset_right = 872.0
-offset_bottom = 449.0
+layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("5_mpc68")
 texture_pressed = ExtResource("6_yrkib")
 texture_hover = ExtResource("7_rb5ig")
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

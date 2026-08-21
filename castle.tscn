@@ -777,7 +777,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("22_cxnjq")
 theme_override_font_sizes/font_size = 38
-text = "Exit(once castle is done)"
+text = "Exit (once castle is done)"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -95,6 +95,9 @@ animations = [{
 "speed": 7.5
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pbfsw"]
+light_mode = 1
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q13i1"]
 light_mode = 1
 
@@ -155,13 +158,17 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="Stamina Bar Overlay" type="Sprite2D" parent="Camera2D" unique_id=714117431]
+z_index = 2
 texture_filter = 1
+material = SubResource("CanvasItemMaterial_pbfsw")
 position = Vector2(200, 140.00002)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("18_pbfsw")
 
 [node name="Health Bar Overlay" type="Sprite2D" parent="Camera2D" unique_id=1366994700]
+z_index = 2
 texture_filter = 1
+material = SubResource("CanvasItemMaterial_pbfsw")
 position = Vector2(-201.00002, 140.00002)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("18_pbfsw")
