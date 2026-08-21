@@ -55,15 +55,6 @@ text = "
 "
 horizontal_alignment = 1
 
-[node name="RBP" type="Label" parent="VBoxContainer" unique_id=734616948]
-texture_filter = 1
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_8qtwp")
-theme_override_font_sizes/font_size = 24
-text = "READ BEFORE PLAYING: when playing if enemies dont move toward you, please wait for them to load navigation(this is a bug that we dont know why it happens). If enemies dont load it is likeley due to your computers speed and we are sorry you cant experience the game fully."
-horizontal_alignment = 1
-autowrap_mode = 3
-
 [node name="Play" type="TextureButton" parent="VBoxContainer" unique_id=1487554848]
 texture_filter = 1
 layout_mode = 2
@@ -88,6 +79,15 @@ theme_override_fonts/font = ExtResource("2_8qtwp")
 theme_override_font_sizes/font_size = 19
 placeholder_text = "Castle number(if you have played before)"
 wrap_mode = 1
+
+[node name="RBP" type="Label" parent="VBoxContainer" unique_id=734616948]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8qtwp")
+theme_override_font_sizes/font_size = 21
+text = "READ BEFORE PLAYING: when playing if enemies dont move toward you, please wait for them to load navigation(this is a bug that we dont know why it happens). If enemies dont load it is likeley due to your computers speed and we are sorry you cant experience the game fully. Also sometimes game will take a while to load even on a good computer"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
