@@ -2,6 +2,7 @@ extends Sprite2D
 
 @export var player : CharacterBody2D
 @export var frame_delay : int = 50
+@export var EndCutscene : PackedScene
 
 @onready var arm_rotation: Node2D = $"Arm Rotation"
 @onready var camera_2d: Camera2D = $Camera2D
@@ -17,7 +18,7 @@ var last_positions : Array[Vector2]
 var running : bool = false
 var line : bool = false
 var can_be_lined : bool = true
-var health : float = 5
+var health : float = 1
 var hit : int = 0
 
 signal start
@@ -62,6 +63,7 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		modulate = Color.RED
 		if health <= 0:
 			queue_free()
+			get_tree().change_scene_to_packed(EndCutscene)
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and running:

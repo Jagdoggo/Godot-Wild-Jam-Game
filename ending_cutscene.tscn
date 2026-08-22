@@ -1,0 +1,416 @@
+[gd_scene format=3 uid="uid://ce61c0do3icnc"]
+
+[ext_resource type="Script" uid="uid://jx75y5wvc1ik" path="res://ending_cutscene.gd" id="1_lq1n2"]
+[ext_resource type="Texture2D" uid="uid://bnimlmxmsa658" path="res://Assets/Items Or Castle Items/EndingCutscene91.png" id="1_vf8px"]
+[ext_resource type="PackedScene" uid="uid://ekd5pks64x5i" path="res://main_menu.tscn" id="2_fo2h4"]
+[ext_resource type="Texture2D" uid="uid://bvmickevf8fn7" path="res://Assets/Items Or Castle Items/EndingCutscene1.png" id="2_syqok"]
+[ext_resource type="Texture2D" uid="uid://becaao57fml6r" path="res://Assets/Items Or Castle Items/EndingCutscene2.png" id="3_non5r"]
+[ext_resource type="Texture2D" uid="uid://nuj2gsh1tccc" path="res://Assets/Items Or Castle Items/EndingCutscene3.png" id="4_h4xh5"]
+[ext_resource type="Texture2D" uid="uid://cttf2qp67h2q1" path="res://Assets/Items Or Castle Items/EndingCutscene4.png" id="5_4hddu"]
+[ext_resource type="Texture2D" uid="uid://cb62ks8pwwjqi" path="res://Assets/Items Or Castle Items/EndingCutscene5.png" id="6_lq1n2"]
+[ext_resource type="Texture2D" uid="uid://cohgwyek4q46g" path="res://Assets/Items Or Castle Items/EndingCutscene6.png" id="7_fo2h4"]
+[ext_resource type="Texture2D" uid="uid://ddl7b6yht0f7u" path="res://Assets/Items Or Castle Items/EndingCutscene7.png" id="8_gsw1k"]
+[ext_resource type="Texture2D" uid="uid://c2s7o18mlljf5" path="res://Assets/Items Or Castle Items/EndingCutscene8.png" id="9_usp7y"]
+[ext_resource type="Texture2D" uid="uid://b8s7c3by7b55d" path="res://Assets/Items Or Castle Items/EndingCutscene9.png" id="10_dvfno"]
+[ext_resource type="Texture2D" uid="uid://dls68b77mat1w" path="res://Assets/Items Or Castle Items/EndingCutscene10.png" id="11_qd47t"]
+[ext_resource type="Texture2D" uid="uid://c7itapar8fnve" path="res://Assets/Items Or Castle Items/EndingCutscene11.png" id="12_fw5ns"]
+[ext_resource type="Texture2D" uid="uid://bm2136vrbqbbo" path="res://Assets/Items Or Castle Items/EndingCutscene12.png" id="13_2g083"]
+[ext_resource type="Texture2D" uid="uid://bbxaxxsx2lp5" path="res://Assets/Items Or Castle Items/EndingCutscene13.png" id="14_nvxhu"]
+[ext_resource type="Texture2D" uid="uid://burn8j0uws7kw" path="res://Assets/Items Or Castle Items/EndingCutscene14.png" id="15_bevfu"]
+[ext_resource type="Texture2D" uid="uid://ovoep463gmnx" path="res://Assets/Items Or Castle Items/EndingCutscene15.png" id="16_jarpw"]
+[ext_resource type="Texture2D" uid="uid://3nmxb7ctmxlc" path="res://Assets/Items Or Castle Items/EndingCutscene16.png" id="17_ysbjs"]
+[ext_resource type="Texture2D" uid="uid://dsuywhcotsymo" path="res://Assets/Items Or Castle Items/EndingCutscene17.png" id="18_0rxji"]
+[ext_resource type="Texture2D" uid="uid://bup0ud8ltmkqf" path="res://Assets/Items Or Castle Items/EndingCutscene18.png" id="19_v8nrs"]
+[ext_resource type="Texture2D" uid="uid://bssdlsipdql38" path="res://Assets/Items Or Castle Items/EndingCutscene19.png" id="20_5nhwl"]
+[ext_resource type="Texture2D" uid="uid://bnurov8tc1b1c" path="res://Assets/Items Or Castle Items/EndingCutscene20.png" id="21_0q3bh"]
+[ext_resource type="Texture2D" uid="uid://1oxfctus7u1k" path="res://Assets/Items Or Castle Items/EndingCutscene21.png" id="22_egavf"]
+[ext_resource type="Texture2D" uid="uid://cf4j4tcqmgd22" path="res://Assets/Items Or Castle Items/EndingCutscene22.png" id="23_koxu6"]
+[ext_resource type="Texture2D" uid="uid://cy4wqsi731j3n" path="res://Assets/Items Or Castle Items/EndingCutscene23.png" id="24_d4rq3"]
+[ext_resource type="Texture2D" uid="uid://bw8e3jebjts1f" path="res://Assets/Items Or Castle Items/EndingCutscene24.png" id="25_rlcw0"]
+[ext_resource type="Texture2D" uid="uid://dmboosjo1lc34" path="res://Assets/Items Or Castle Items/EndingCutscene25.png" id="26_gx32a"]
+[ext_resource type="Texture2D" uid="uid://m50qx7hwt03j" path="res://Assets/Items Or Castle Items/EndingCutscene26.png" id="27_s8ihc"]
+[ext_resource type="Texture2D" uid="uid://d08rxnhibyt0l" path="res://Assets/Items Or Castle Items/EndingCutscene27.png" id="28_0vyar"]
+[ext_resource type="Texture2D" uid="uid://cd5dple3gwddv" path="res://Assets/Items Or Castle Items/EndingCutscene28.png" id="29_g57hv"]
+[ext_resource type="Texture2D" uid="uid://7ern7317mwfr" path="res://Assets/Items Or Castle Items/EndingCutscene29.png" id="30_bnq6s"]
+[ext_resource type="Texture2D" uid="uid://2e1t787k2b0q" path="res://Assets/Items Or Castle Items/EndingCutscene30.png" id="31_j6deq"]
+[ext_resource type="Texture2D" uid="uid://bgne7ctmv253h" path="res://Assets/Items Or Castle Items/EndingCutscene31.png" id="32_wj8ne"]
+[ext_resource type="Texture2D" uid="uid://b07vbfp0u0an0" path="res://Assets/Items Or Castle Items/EndingCutscene32.png" id="33_slvsk"]
+[ext_resource type="Texture2D" uid="uid://vch6nq527tn6" path="res://Assets/Items Or Castle Items/EndingCutscene33.png" id="34_6fuk2"]
+[ext_resource type="Texture2D" uid="uid://cp07yq4b70vac" path="res://Assets/Items Or Castle Items/EndingCutscene34.png" id="35_lnahx"]
+[ext_resource type="Texture2D" uid="uid://ddewd0hwcivcr" path="res://Assets/Items Or Castle Items/EndingCutscene35.png" id="36_he0kj"]
+[ext_resource type="Texture2D" uid="uid://cdxy1qgf8415s" path="res://Assets/Items Or Castle Items/EndingCutscene36.png" id="37_tt0m5"]
+[ext_resource type="Texture2D" uid="uid://dmh28y0uhwlo5" path="res://Assets/Items Or Castle Items/EndingCutscene37.png" id="38_au0lm"]
+[ext_resource type="Texture2D" uid="uid://fyeyyhwvmqdq" path="res://Assets/Items Or Castle Items/EndingCutscene38.png" id="39_jcs43"]
+[ext_resource type="Texture2D" uid="uid://cqmmyeij0ymxd" path="res://Assets/Items Or Castle Items/EndingCutscene39.png" id="40_c8447"]
+[ext_resource type="Texture2D" uid="uid://dg0pa7t8fdsm6" path="res://Assets/Items Or Castle Items/EndingCutscene40.png" id="41_7md51"]
+[ext_resource type="Texture2D" uid="uid://bvkg8f548404l" path="res://Assets/Items Or Castle Items/EndingCutscene41.png" id="42_yyujc"]
+[ext_resource type="Texture2D" uid="uid://dbni1hq8epv4i" path="res://Assets/Items Or Castle Items/EndingCutscene42.png" id="43_n8qai"]
+[ext_resource type="Texture2D" uid="uid://btbqob1vnn1nm" path="res://Assets/Items Or Castle Items/EndingCutscene43.png" id="44_oc2o4"]
+[ext_resource type="Texture2D" uid="uid://cbaqf46w17ey8" path="res://Assets/Items Or Castle Items/EndingCutscene44.png" id="45_vj2by"]
+[ext_resource type="Texture2D" uid="uid://difs6omkh5v3v" path="res://Assets/Items Or Castle Items/EndingCutscene45.png" id="46_r3pyq"]
+[ext_resource type="Texture2D" uid="uid://bw3otqabvut2q" path="res://Assets/Items Or Castle Items/EndingCutscene46.png" id="47_rrgit"]
+[ext_resource type="Texture2D" uid="uid://byf7ch0wp55dq" path="res://Assets/Items Or Castle Items/EndingCutscene47.png" id="48_rqn8s"]
+[ext_resource type="Texture2D" uid="uid://bmlilt042dx6f" path="res://Assets/Items Or Castle Items/EndingCutscene48.png" id="49_kfwi0"]
+[ext_resource type="Texture2D" uid="uid://bja55w2whkrp" path="res://Assets/Items Or Castle Items/EndingCutscene49.png" id="50_stnl8"]
+[ext_resource type="Texture2D" uid="uid://bljldbwyrxr4e" path="res://Assets/Items Or Castle Items/EndingCutscene50.png" id="51_7mfpu"]
+[ext_resource type="Texture2D" uid="uid://cpksxwr41a01p" path="res://Assets/Items Or Castle Items/EndingCutscene51.png" id="52_m27lg"]
+[ext_resource type="Texture2D" uid="uid://bgabnykt5yehb" path="res://Assets/Items Or Castle Items/EndingCutscene52.png" id="53_t3cit"]
+[ext_resource type="Texture2D" uid="uid://ruf24ije1316" path="res://Assets/Items Or Castle Items/EndingCutscene53.png" id="54_f5a82"]
+[ext_resource type="Texture2D" uid="uid://dnkck48cy4o5t" path="res://Assets/Items Or Castle Items/EndingCutscene54.png" id="55_6ma0r"]
+[ext_resource type="Texture2D" uid="uid://tw8816w14a7" path="res://Assets/Items Or Castle Items/EndingCutscene55.png" id="56_70ulf"]
+[ext_resource type="Texture2D" uid="uid://dwofesc2yj5sn" path="res://Assets/Items Or Castle Items/EndingCutscene56.png" id="57_uvc6k"]
+[ext_resource type="Texture2D" uid="uid://conj6lqhowdhj" path="res://Assets/Items Or Castle Items/EndingCutscene57.png" id="58_87nfm"]
+[ext_resource type="Texture2D" uid="uid://dcaamdg1km8ng" path="res://Assets/Items Or Castle Items/EndingCutscene58.png" id="59_q50ee"]
+[ext_resource type="Texture2D" uid="uid://cjdug4owet24j" path="res://Assets/Items Or Castle Items/EndingCutscene59.png" id="60_o7pqr"]
+[ext_resource type="Texture2D" uid="uid://42w4ckro1ucv" path="res://Assets/Items Or Castle Items/EndingCutscene60.png" id="61_aefxj"]
+[ext_resource type="Texture2D" uid="uid://b1e5o5lw5w43f" path="res://Assets/Items Or Castle Items/EndingCutscene61.png" id="62_g02nh"]
+[ext_resource type="Texture2D" uid="uid://biv5ada34rrt" path="res://Assets/Items Or Castle Items/EndingCutscene62.png" id="63_8brm0"]
+[ext_resource type="Texture2D" uid="uid://3xrotlfa3uxk" path="res://Assets/Items Or Castle Items/EndingCutscene63.png" id="64_vc6bv"]
+[ext_resource type="Texture2D" uid="uid://5le633fl0hav" path="res://Assets/Items Or Castle Items/EndingCutscene64.png" id="65_hi1ee"]
+[ext_resource type="Texture2D" uid="uid://ck6ach2jkkl0j" path="res://Assets/Items Or Castle Items/EndingCutscene65.png" id="66_a3206"]
+[ext_resource type="Texture2D" uid="uid://cv7ipvdp4uv77" path="res://Assets/Items Or Castle Items/EndingCutscene66.png" id="67_ji5cs"]
+[ext_resource type="Texture2D" uid="uid://c75byxhr5hag8" path="res://Assets/Items Or Castle Items/EndingCutscene67.png" id="68_425yp"]
+[ext_resource type="Texture2D" uid="uid://dqw7kqng78x1i" path="res://Assets/Items Or Castle Items/EndingCutscene68.png" id="69_hdoym"]
+[ext_resource type="Texture2D" uid="uid://b2uyul0it77w6" path="res://Assets/Items Or Castle Items/EndingCutscene69.png" id="70_7eti6"]
+[ext_resource type="Texture2D" uid="uid://dyimurroh551y" path="res://Assets/Items Or Castle Items/EndingCutscene70.png" id="71_uxdhj"]
+[ext_resource type="Texture2D" uid="uid://cokm7mvgms1ui" path="res://Assets/Items Or Castle Items/EndingCutscene71.png" id="72_rsh3i"]
+[ext_resource type="Texture2D" uid="uid://dxjd2ybb0tftk" path="res://Assets/Items Or Castle Items/EndingCutscene72.png" id="73_agmra"]
+[ext_resource type="Texture2D" uid="uid://c3vpoy2awvi7f" path="res://Assets/Items Or Castle Items/EndingCutscene73.png" id="74_116vb"]
+[ext_resource type="Texture2D" uid="uid://cktpb25x6k0ay" path="res://Assets/Items Or Castle Items/EndingCutscene74.png" id="75_72flf"]
+[ext_resource type="Texture2D" uid="uid://bifo6aeb72a8a" path="res://Assets/Items Or Castle Items/EndingCutscene75.png" id="76_g7ykw"]
+[ext_resource type="Texture2D" uid="uid://citl4o5602hwc" path="res://Assets/Items Or Castle Items/EndingCutscene76.png" id="77_iptba"]
+[ext_resource type="Texture2D" uid="uid://cqmch53wgqejl" path="res://Assets/Items Or Castle Items/EndingCutscene77.png" id="78_skj23"]
+[ext_resource type="Texture2D" uid="uid://crbjrehy7by1" path="res://Assets/Items Or Castle Items/EndingCutscene78.png" id="79_jl01h"]
+[ext_resource type="Texture2D" uid="uid://wxkog2dh223s" path="res://Assets/Items Or Castle Items/EndingCutscene79.png" id="80_augqq"]
+[ext_resource type="Texture2D" uid="uid://h1m5plmin7o4" path="res://Assets/Items Or Castle Items/EndingCutscene80.png" id="81_qifhk"]
+[ext_resource type="Texture2D" uid="uid://uylttd6mnc2n" path="res://Assets/Items Or Castle Items/EndingCutscene81.png" id="82_yfgy2"]
+[ext_resource type="Texture2D" uid="uid://iau43836b4dx" path="res://Assets/Items Or Castle Items/EndingCutscene82.png" id="83_ly8p5"]
+[ext_resource type="Texture2D" uid="uid://d22hvadu4758g" path="res://Assets/Items Or Castle Items/EndingCutscene83.png" id="84_1d0cr"]
+[ext_resource type="Texture2D" uid="uid://ib2f6e3kw36s" path="res://Assets/Items Or Castle Items/EndingCutscene84.png" id="85_ipk1t"]
+[ext_resource type="Texture2D" uid="uid://dwi0u2ie00arq" path="res://Assets/Items Or Castle Items/EndingCutscene85.png" id="86_3hc6m"]
+[ext_resource type="Texture2D" uid="uid://dxr6h5n8aobqd" path="res://Assets/Items Or Castle Items/EndingCutscene86.png" id="87_0lwub"]
+[ext_resource type="Texture2D" uid="uid://cxge34ossp7ie" path="res://Assets/Items Or Castle Items/EndingCutscene87.png" id="88_f3jn3"]
+[ext_resource type="Texture2D" uid="uid://c3qrq3c1sbf5g" path="res://Assets/Items Or Castle Items/EndingCutscene88.png" id="89_0j1en"]
+[ext_resource type="Texture2D" uid="uid://blnrqdmmgf8c1" path="res://Assets/Items Or Castle Items/EndingCutscene89.png" id="90_nivoo"]
+[ext_resource type="Texture2D" uid="uid://o07ns20jr84y" path="res://Assets/Items Or Castle Items/EndingCutscene90.png" id="91_6e0aj"]
+[ext_resource type="Texture2D" uid="uid://btr8a25ulsgm6" path="res://Assets/Buttons/MenuButton1.png" id="94_gsw1k"]
+[ext_resource type="Texture2D" uid="uid://fpncngnlxj5q" path="res://Assets/Buttons/MenuButton2.png" id="95_usp7y"]
+[ext_resource type="Texture2D" uid="uid://bnrsax4w2dcsq" path="res://Assets/Buttons/MenuButton3.png" id="96_dvfno"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ksya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_syqok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_non5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h4xh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4hddu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lq1n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fo2h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gsw1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_usp7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dvfno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qd47t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fw5ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2g083")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nvxhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bevfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jarpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ysbjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0rxji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v8nrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5nhwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0q3bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_egavf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_koxu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_d4rq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rlcw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gx32a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_s8ihc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0vyar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_g57hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bnq6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j6deq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_wj8ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_slvsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_6fuk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_lnahx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_he0kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_tt0m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_au0lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jcs43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_c8447")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7md51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_yyujc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_n8qai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_oc2o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_vj2by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_r3pyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_rrgit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_rqn8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_kfwi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_stnl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_7mfpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_m27lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_t3cit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_f5a82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_6ma0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_70ulf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_uvc6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_87nfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_q50ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o7pqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_aefxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_g02nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_8brm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_vc6bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_hi1ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_a3206")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ji5cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_425yp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_hdoym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_7eti6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_uxdhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_rsh3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_agmra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_116vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_72flf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_g7ykw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_iptba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_skj23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_jl01h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_augqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_qifhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_yfgy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ly8p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_1d0cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_ipk1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_3hc6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_0lwub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_f3jn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_0j1en")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_nivoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_6e0aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_vf8px")
+}],
+"loop": 0,
+"name": &"Ending Cutscene",
+"speed": 5.0
+}]
+
+[node name="Ending Cutscene" type="Node2D" unique_id=941980907]
+script = ExtResource("1_lq1n2")
+mainMenuScene = ExtResource("2_fo2h4")
+
+[node name="Timer" type="Timer" parent="." unique_id=2141431977]
+one_shot = true
+
+[node name="Blackout Sprite" type="Sprite2D" parent="." unique_id=1797373430]
+position = Vector2(576, 324)
+scale = Vector2(100, 100)
+texture = ExtResource("1_vf8px")
+
+[node name="Ending Cutscene" type="AnimatedSprite2D" parent="." unique_id=1785201638]
+texture_filter = 1
+position = Vector2(806, 324.00003)
+scale = Vector2(5.05, 5.05)
+sprite_frames = SubResource("SpriteFrames_7ksya")
+animation = &"Ending Cutscene"
+frame = 9
+frame_progress = 0.66596395
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1084117119]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer" unique_id=1732122282]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("94_gsw1k")
+texture_pressed = ExtResource("95_usp7y")
+texture_hover = ExtResource("96_dvfno")
+
+[connection signal="timeout" from="Timer" to="." method="_on_big_timer_timeout"]
+[connection signal="animation_finished" from="Ending Cutscene" to="." method="_on_ending_cutscene_animation_finished"]
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

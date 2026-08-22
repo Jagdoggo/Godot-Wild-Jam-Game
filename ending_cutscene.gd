@@ -1,0 +1,22 @@
+extends Node2D
+
+@export var mainMenuScene : PackedScene
+
+@onready var blackout_sprite: Sprite2D = $"Blackout Sprite"
+@onready var menu: VBoxContainer = $VBoxContainer
+@onready var ending_cutscene: AnimatedSprite2D = $"Ending Cutscene"
+
+func _ready() -> void:
+	ending_cutscene.frame = 90
+
+func _on_ending_cutscene_animation_finished() -> void:
+	ending_cutscene.frame = 90
+	menu.visible = true
+
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_packed(mainMenuScene)
+
+func _on_big_timer_timeout() -> void:
+	ending_cutscene.frame = 0
+	ending_cutscene.play()

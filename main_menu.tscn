@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://b7c64grgaa3xq" path="res://Assets/Micro5-Regular.ttf" id="2_8qtwp"]
 [ext_resource type="Texture2D" uid="uid://baq3opo0xr4l7" path="res://Assets/Buttons/MainMenuBackground1.png" id="2_dy7ct"]
 [ext_resource type="Texture2D" uid="uid://c0ccfqvx0womx" path="res://Assets/Buttons/PlayButton3.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bwywnqrp57cwb" path="res://Assets/Buttons/MainMenuBackground12.png" id="3_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://bcqujdkdc45g7" path="res://Assets/RAMPAGE.png" id="3_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://d17a4v8ajqtd2" path="res://Assets/Buttons/PlayButton2.png" id="3_glbon"]
 [ext_resource type="Texture2D" uid="uid://ba1r0owiotcx4" path="res://Assets/Buttons/QuestButton1.png" id="4_nlkkf"]
@@ -20,11 +21,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qe12f")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1533416444]
+[node name="Background 1" type="Sprite2D" parent="." unique_id=1533416444]
 texture_filter = 1
-position = Vector2(698.00006, 231)
-scale = Vector2(15, 15)
+position = Vector2(768, 316)
+scale = Vector2(12.5, 12.5)
 texture = ExtResource("2_dy7ct")
+
+[node name="Background 2" type="Sprite2D" parent="." unique_id=1436658821]
+texture_filter = 1
+position = Vector2(768, 316)
+scale = Vector2(12.5, 12.5)
+texture = ExtResource("3_0k4wn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1876072770]
 layout_mode = 1

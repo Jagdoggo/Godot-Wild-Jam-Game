@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://jar68f735yl0" path="res://trash_bot.gd" id="2_00rh5"]
 [ext_resource type="AudioStream" uid="uid://ek1i4pcco1xj" path="res://Assets/Sounds/RAMpage_boss_OST.mp3" id="3_5mcfc"]
 [ext_resource type="Texture2D" uid="uid://g3kk3knqvqpf" path="res://Assets/Bosses/Trash Ball/DELTALASER.png" id="3_f2qku"]
+[ext_resource type="PackedScene" uid="uid://ce61c0do3icnc" path="res://ending_cutscene.tscn" id="3_pyx8q"]
 [ext_resource type="Texture2D" uid="uid://d4h30kmjcl0m7" path="res://Assets/Bosses/Trash Ball/DELTAARM.png" id="4_pyx8q"]
 [ext_resource type="Texture2D" uid="uid://bb3glup5f5ewx" path="res://Assets/Bosses/Trash Ball/TrashBallEye.png" id="6_8dthv"]
 
@@ -36,6 +37,7 @@ fill_to = Vector2(1, 0.5)
 texture_filter = 1
 texture = ExtResource("1_fsda7")
 script = ExtResource("2_00rh5")
+EndCutscene = ExtResource("3_pyx8q")
 
 [node name="Line Rotation" type="Node2D" parent="." unique_id=394022649]
 
@@ -67,10 +69,12 @@ position = Vector2(170, -1.1368684e-13)
 shape = SubResource("RectangleShape2D_00rh5")
 
 [node name="Line2D" type="Line2D" parent="Arm Rotation/Death Zone" unique_id=1643982622]
+visible = false
 points = PackedVector2Array(0, 0, 60, 0)
 default_color = Color(0, 0, 0, 1)
 
 [node name="Line2D2" type="Line2D" parent="Arm Rotation/Death Zone" unique_id=1774516745]
+visible = false
 points = PackedVector2Array(140, 0, 184, 0)
 default_color = Color(0, 0, 0, 1)
 
