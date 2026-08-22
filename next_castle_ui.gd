@@ -8,3 +8,7 @@ func _on_button_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Action"):
+		_on_button_pressed()
