@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cbhndxxxufxvc" path="res://Assets/Buttons/MainMenuBackground9.png" id="18_m2y5l"]
 [ext_resource type="Texture2D" uid="uid://djot6ufcuxc73" path="res://Assets/Buttons/MainMenuBackground10.png" id="19_imjy1"]
 [ext_resource type="Texture2D" uid="uid://d1vs5tft5yfpr" path="res://Assets/Buttons/MainMenuBackground11.png" id="20_u5051"]
+[ext_resource type="Texture2D" uid="uid://bnimlmxmsa658" path="res://Assets/Items Or Castle Items/EndingCutscene91.png" id="22_7bbuq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
 animations = [{
@@ -154,6 +155,12 @@ texture_filter = 1
 scale = Vector2(10.125, 10.125)
 sprite_frames = SubResource("SpriteFrames_5xaec")
 frame = 10
+
+[node name="BLACKOUT" type="Sprite2D" parent="." unique_id=351665327]
+z_index = -10
+position = Vector2(576, 324)
+scale = Vector2(100, 100)
+texture = ExtResource("22_7bbuq")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

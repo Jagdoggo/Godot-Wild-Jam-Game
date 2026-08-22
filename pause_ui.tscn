@@ -43,14 +43,6 @@ offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu" type="TextureButton" parent="VBoxContainer" unique_id=2012903351]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_rkwc1")
-layout_mode = 2
-texture_normal = ExtResource("4_a1xgm")
-texture_pressed = ExtResource("5_rkwc1")
-texture_hover = ExtResource("6_jvv32")
-
 [node name="Resume" type="TextureButton" parent="VBoxContainer" unique_id=1765994600]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_rkwc1")
@@ -58,6 +50,14 @@ layout_mode = 2
 texture_normal = ExtResource("1_cd4je")
 texture_pressed = ExtResource("2_tce7n")
 texture_hover = ExtResource("3_nehuh")
+
+[node name="Menu" type="TextureButton" parent="VBoxContainer" unique_id=2012903351]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_rkwc1")
+layout_mode = 2
+texture_normal = ExtResource("4_a1xgm")
+texture_pressed = ExtResource("5_rkwc1")
+texture_hover = ExtResource("6_jvv32")
 
 [node name="Quit" type="TextureButton" parent="VBoxContainer" unique_id=1106049030]
 texture_filter = 1
@@ -68,6 +68,6 @@ texture_normal = ExtResource("4_b4yyp")
 texture_pressed = ExtResource("5_a1xgm")
 texture_hover = ExtResource("6_rkwc1")
 
-[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
