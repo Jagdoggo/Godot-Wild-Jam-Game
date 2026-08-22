@@ -2,7 +2,6 @@ extends Node2D
 
 @export var mainMenuScene : PackedScene
 
-@onready var blackout_sprite: Sprite2D = $"Blackout Sprite"
 @onready var menu: VBoxContainer = $VBoxContainer
 @onready var ending_cutscene: AnimatedSprite2D = $"Ending Cutscene"
 

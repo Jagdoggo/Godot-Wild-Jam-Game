@@ -63,7 +63,6 @@ func _on_ram_area_body_entered(body: Node2D) -> void:
 		modulate = Color.RED
 		if health <= 0:
 			queue_free()
-			get_tree().change_scene_to_packed(EndCutscene)
 
 func _on_death_zone_body_entered(body: Node2D) -> void:
 	if body.name == "Player" and running:

@@ -78,8 +78,9 @@ func start():
 	time_machine.play("default")
 
 func _on_time_machine_animation_finished() -> void:
-	w_l_text.show()
-	if completed:
-		w_l_text.text = "Congratulations, you escaped through the time machine, after defeating the robot. You were happily welcomed back to your home in the future.
-THE END"
-	get_tree().paused = true
+	get_tree().change_scene_to_file("res://ending_cutscene.tscn")
+	#w_l_text.show()
+	#if completed:
+		#w_l_text.text = "Congratulations, you escaped through the time machine, after defeating the robot. You were happily welcomed back to your home in the future.
+#THE END"
+	#get_tree().paused = true
