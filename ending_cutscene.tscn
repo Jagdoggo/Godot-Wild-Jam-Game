@@ -419,8 +419,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("94_gsw1k")
-texture_pressed = ExtResource("95_usp7y")
-texture_hover = ExtResource("96_dvfno")
+texture_pressed = ExtResource("96_dvfno")
+texture_hover = ExtResource("95_usp7y")
 
 [node name="Control" type="Control" parent="." unique_id=978082506]
 layout_mode = 1

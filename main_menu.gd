@@ -1,14 +1,10 @@
 extends Control
 
 @onready var text_edit: TextEdit = $VBoxContainer/TextEdit
+@onready var back: AnimatedSprite2D = $Control/back
 
 func _ready() -> void:
-	if Global.dungeon_level == 10:
-		get_child(0).visible = false
-		get_child(1).visible = true
-	else:
-		get_child(0).visible = true
-		get_child(1).visible = false
+	back.frame = Global.dungeon_level+1
 
 func _on_play_pressed() -> void:
 	if text_edit.text != "":

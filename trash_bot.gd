@@ -18,7 +18,7 @@ var last_positions : Array[Vector2]
 var running : bool = false
 var line : bool = false
 var can_be_lined : bool = true
-var health : float = 1
+var health : float = 5
 var hit : int = 0
 
 signal start

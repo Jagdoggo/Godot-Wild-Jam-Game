@@ -11,6 +11,60 @@
 [ext_resource type="Texture2D" uid="uid://ba1r0owiotcx4" path="res://Assets/Buttons/QuestButton1.png" id="4_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://ofpi8ms2bioe" path="res://Assets/Buttons/QuestButton3.png" id="5_qe12f"]
 [ext_resource type="Texture2D" uid="uid://cp3ik7ff2hhqy" path="res://Assets/Buttons/QuestButton2.png" id="6_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://cbgeyso6q6a73" path="res://Assets/Buttons/MainMenuBackground2.png" id="11_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://fr6bsvtoiyc5" path="res://Assets/Buttons/MainMenuBackground3.png" id="12_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://by6bf5fuumr31" path="res://Assets/Buttons/MainMenuBackground4.png" id="13_saq78"]
+[ext_resource type="Texture2D" uid="uid://bwmc8sc2nid3d" path="res://Assets/Buttons/MainMenuBackground5.png" id="14_8uw0o"]
+[ext_resource type="Texture2D" uid="uid://bv7n5sx347dal" path="res://Assets/Buttons/MainMenuBackground6.png" id="15_ql5ya"]
+[ext_resource type="Texture2D" uid="uid://0yl6uggljcd0" path="res://Assets/Buttons/MainMenuBackground7.png" id="16_ka3nr"]
+[ext_resource type="Texture2D" uid="uid://7xwp75jf3jvo" path="res://Assets/Buttons/MainMenuBackground8.png" id="17_48knj"]
+[ext_resource type="Texture2D" uid="uid://cbhndxxxufxvc" path="res://Assets/Buttons/MainMenuBackground9.png" id="18_m2y5l"]
+[ext_resource type="Texture2D" uid="uid://djot6ufcuxc73" path="res://Assets/Buttons/MainMenuBackground10.png" id="19_imjy1"]
+[ext_resource type="Texture2D" uid="uid://d1vs5tft5yfpr" path="res://Assets/Buttons/MainMenuBackground11.png" id="20_u5051"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xaec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dy7ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e5qqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7bbuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_saq78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8uw0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ql5ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ka3nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_48knj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_m2y5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_imjy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_u5051")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0k4wn")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main Menu" type="Control" unique_id=1722781165]
 layout_mode = 3
@@ -20,18 +74,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qe12f")
-
-[node name="Background 1" type="Sprite2D" parent="." unique_id=1533416444]
-texture_filter = 1
-position = Vector2(768, 316)
-scale = Vector2(12.5, 12.5)
-texture = ExtResource("2_dy7ct")
-
-[node name="Background 2" type="Sprite2D" parent="." unique_id=1436658821]
-texture_filter = 1
-position = Vector2(768, 316)
-scale = Vector2(12.5, 12.5)
-texture = ExtResource("3_0k4wn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1876072770]
 layout_mode = 1
@@ -95,6 +137,23 @@ theme_override_font_sizes/font_size = 21
 text = "READ BEFORE PLAYING: when playing if enemies dont move toward you, please wait for them to load navigation(this is a bug that we dont know why it happens). If enemies dont load it is likeley due to your computers speed and we are sorry you cant experience the game fully. Also sometimes game will take a while to load even on a good computer"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Control" type="Control" parent="." unique_id=18919368]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="back" type="AnimatedSprite2D" parent="Control" unique_id=1854209607]
+z_index = -1
+texture_filter = 1
+scale = Vector2(10.125, 10.125)
+sprite_frames = SubResource("SpriteFrames_5xaec")
+frame = 10
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

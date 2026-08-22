@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://coq456ensc25x"]
+
+[ext_resource type="Script" uid="uid://bnifrcoq48xsf" path="res://pause_ui.gd" id="1_a1xgm"]
+[ext_resource type="Texture2D" uid="uid://b1gwgyci1lj42" path="res://Assets/Buttons/Resume'Button1.png" id="1_cd4je"]
+[ext_resource type="Texture2D" uid="uid://dlj236lol0umo" path="res://Assets/Buttons/Resume'Button3.png" id="2_tce7n"]
+[ext_resource type="Texture2D" uid="uid://ddy6kycmduvh4" path="res://Assets/Buttons/Resume'Button2.png" id="3_nehuh"]
+[ext_resource type="Texture2D" uid="uid://btr8a25ulsgm6" path="res://Assets/Buttons/MenuButton1.png" id="4_a1xgm"]
+[ext_resource type="Texture2D" uid="uid://ba1r0owiotcx4" path="res://Assets/Buttons/QuestButton1.png" id="4_b4yyp"]
+[ext_resource type="Texture2D" uid="uid://ofpi8ms2bioe" path="res://Assets/Buttons/QuestButton3.png" id="5_a1xgm"]
+[ext_resource type="Texture2D" uid="uid://bnrsax4w2dcsq" path="res://Assets/Buttons/MenuButton3.png" id="5_rkwc1"]
+[ext_resource type="Texture2D" uid="uid://fpncngnlxj5q" path="res://Assets/Buttons/MenuButton2.png" id="6_jvv32"]
+[ext_resource type="Texture2D" uid="uid://cp3ik7ff2hhqy" path="res://Assets/Buttons/QuestButton2.png" id="6_rkwc1"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7ahtn"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rkwc1"]
+light_mode = 1
+
+[node name="Pause UI" type="Control" unique_id=262847755]
+process_mode = 3
+z_index = 10
+material = SubResource("CanvasItemMaterial_7ahtn")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a1xgm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1705610205]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -78.0
+offset_right = 98.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="TextureButton" parent="VBoxContainer" unique_id=2012903351]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_rkwc1")
+layout_mode = 2
+texture_normal = ExtResource("4_a1xgm")
+texture_pressed = ExtResource("5_rkwc1")
+texture_hover = ExtResource("6_jvv32")
+
+[node name="Resume" type="TextureButton" parent="VBoxContainer" unique_id=1765994600]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_rkwc1")
+layout_mode = 2
+texture_normal = ExtResource("1_cd4je")
+texture_pressed = ExtResource("2_tce7n")
+texture_hover = ExtResource("3_nehuh")
+
+[node name="Quit" type="TextureButton" parent="VBoxContainer" unique_id=1106049030]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_rkwc1")
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("4_b4yyp")
+texture_pressed = ExtResource("5_a1xgm")
+texture_hover = ExtResource("6_rkwc1")
+
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

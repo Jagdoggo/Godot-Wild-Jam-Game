@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ytstutgk8eb" path="res://Assets/Buttons/BarOverlay.png" id="18_pbfsw"]
 [ext_resource type="FontFile" uid="uid://b7c64grgaa3xq" path="res://Assets/Micro5-Regular.ttf" id="18_pylmc"]
 [ext_resource type="AudioStream" uid="uid://bsvf6e3mwl88e" path="res://Assets/Sounds/RAMpage_dungeon_OST.mp3" id="18_q13i1"]
+[ext_resource type="PackedScene" uid="uid://coq456ensc25x" path="res://pause_ui.tscn" id="21_5tmop"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_231t4"]
 radius = 14.0
@@ -266,6 +267,9 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("18_pylmc")
 theme_override_font_sizes/font_size = 100
 text = "LOADING"
+
+[node name="Pause UI" parent="." unique_id=262847755 instance=ExtResource("21_5tmop")]
+visible = false
 
 [connection signal="timeout" from="Flicker Timer" to="." method="_on_flicker_timer_timeout"]
 [connection signal="timeout" from="Invincible Timer" to="." method="_on_invincible_timer_timeout"]
