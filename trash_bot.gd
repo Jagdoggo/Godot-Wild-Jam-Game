@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 		can_be_lined = false
 		player.health -= 25
 	if running:
-		arm_rotation.rotation_degrees += 5
+		arm_rotation.rotation_degrees += 300 * delta
 
 func _on_detect_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
