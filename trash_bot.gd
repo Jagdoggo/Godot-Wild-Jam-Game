@@ -40,6 +40,7 @@ func _process(delta: float) -> void:
 
 func _on_detect_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
+		health = 5
 		music.play()
 		start.emit()
 		running = true

@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bb3glup5f5ewx" path="res://Assets/Bosses/Trash Ball/TrashBallEye.png" id="6_8dthv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mcfc"]
-size = Vector2(200, 20)
+size = Vector2(260, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xaec"]
-size = Vector2(60, 20)
+size = Vector2(120, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00rh5"]
 size = Vector2(60, 20)
@@ -42,11 +42,10 @@ EndCutscene = ExtResource("3_pyx8q")
 [node name="Line Rotation" type="Node2D" parent="." unique_id=394022649]
 
 [node name="Death Line" type="Area2D" parent="Line Rotation" unique_id=673059543]
-visible = false
 position = Vector2(-200, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Line Rotation/Death Line" unique_id=2077984140]
-position = Vector2(100, 0)
+position = Vector2(70, 0)
 shape = SubResource("RectangleShape2D_5mcfc")
 
 [node name="Sprite2D" type="Sprite2D" parent="Line Rotation/Death Line" unique_id=1731602363]
@@ -61,7 +60,6 @@ rotation = 1.5707964
 position = Vector2(-200, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arm Rotation/Death Zone" unique_id=1458237270]
-position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_5xaec")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Arm Rotation/Death Zone" unique_id=1242829185]
