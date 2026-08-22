@@ -1,17 +1,17 @@
-extends Node2D
+extends Control
 
 @export var mainMenuScene : PackedScene
 
 @onready var menu: VBoxContainer = $VBoxContainer
-@onready var ending_cutscene: AnimatedSprite2D = $"Ending Cutscene"
+@onready var ending_cutscene: AnimatedSprite2D = $"Control/Ending Cutscene"
 
 func _ready() -> void:
 	ending_cutscene.frame = 90
 
 func _on_ending_cutscene_animation_finished() -> void:
+	print("slav")
 	ending_cutscene.frame = 90
 	menu.visible = true
-
 
 func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_packed(mainMenuScene)

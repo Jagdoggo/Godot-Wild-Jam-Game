@@ -378,39 +378,73 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Ending Cutscene" type="Node2D" unique_id=941980907]
+[node name="Ending Cutscene" type="Control" unique_id=682705777]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_lq1n2")
 mainMenuScene = ExtResource("2_fo2h4")
 
 [node name="Timer" type="Timer" parent="." unique_id=2141431977]
 one_shot = true
+autostart = true
 
 [node name="Blackout Sprite" type="Sprite2D" parent="." unique_id=1797373430]
 position = Vector2(576, 324)
 scale = Vector2(100, 100)
 texture = ExtResource("1_vf8px")
 
-[node name="Ending Cutscene" type="AnimatedSprite2D" parent="." unique_id=1785201638]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1084117119]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = -20.0
+offset_right = 24.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer" unique_id=1732122282]
+z_index = 1
 texture_filter = 1
-position = Vector2(806, 324.00003)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("94_gsw1k")
+texture_pressed = ExtResource("95_usp7y")
+texture_hover = ExtResource("96_dvfno")
+
+[node name="Control" type="Control" parent="." unique_id=978082506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Ending Cutscene" type="AnimatedSprite2D" parent="Control" unique_id=1785201638]
+texture_filter = 1
+position = Vector2(20, 20)
 scale = Vector2(5.05, 5.05)
 sprite_frames = SubResource("SpriteFrames_7ksya")
 animation = &"Ending Cutscene"
 frame = 9
 frame_progress = 0.66596395
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1084117119]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer" unique_id=1732122282]
-visible = false
-layout_mode = 2
-texture_normal = ExtResource("94_gsw1k")
-texture_pressed = ExtResource("95_usp7y")
-texture_hover = ExtResource("96_dvfno")
-
 [connection signal="timeout" from="Timer" to="." method="_on_big_timer_timeout"]
-[connection signal="animation_finished" from="Ending Cutscene" to="." method="_on_ending_cutscene_animation_finished"]
 [connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="animation_finished" from="Control/Ending Cutscene" to="." method="_on_ending_cutscene_animation_finished"]
