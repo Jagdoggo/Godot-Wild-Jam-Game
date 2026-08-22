@@ -7,6 +7,8 @@ func _process(delta: float) -> void:
 		else:
 			get_tree().paused = true
 			visible = true
+	if Input.is_action_just_pressed("Action"):
+		_on_resume_pressed()
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
