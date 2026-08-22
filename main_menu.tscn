@@ -154,7 +154,6 @@ z_index = -1
 texture_filter = 1
 scale = Vector2(10.125, 10.125)
 sprite_frames = SubResource("SpriteFrames_5xaec")
-frame = 10
 
 [node name="BLACKOUT" type="Sprite2D" parent="." unique_id=351665327]
 z_index = -10
