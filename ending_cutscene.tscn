@@ -429,16 +429,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = -20.0
-offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Ending Cutscene" type="AnimatedSprite2D" parent="Control" unique_id=1785201638]
 texture_filter = 1
-position = Vector2(20, 20)
 scale = Vector2(5.05, 5.05)
 sprite_frames = SubResource("SpriteFrames_7ksya")
 animation = &"Ending Cutscene"
