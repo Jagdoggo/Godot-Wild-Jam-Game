@@ -243,9 +243,6 @@ collision_mask = 2
 script = ExtResource("1_vn61j")
 kill_particles = ExtResource("2_2vxer")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
-target_desired_distance = 40.0
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
 texture_filter = 1
 position = Vector2(-11, -12)

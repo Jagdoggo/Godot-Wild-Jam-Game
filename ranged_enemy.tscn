@@ -169,9 +169,6 @@ script = ExtResource("1_xrttj")
 kill_particles = ExtResource("2_g4ye6")
 arrow_scene = ExtResource("3_sdf6s")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=197445952]
-target_desired_distance = 160.0
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=291146263]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_4v3he")

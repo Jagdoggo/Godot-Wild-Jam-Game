@@ -7,8 +7,7 @@ extends Node2D
 @export var loot_scene : PackedScene
 @export var room_area_scene : PackedScene
 
-@onready var castle_tiles: TileMapLayer = $"Nav Region/Castle Tiles"
-@onready var nav_region: NavigationRegion2D = $"Nav Region"
+@onready var castle_tiles: TileMapLayer = $"Castle Tiles"
 @onready var floor: TileMapLayer = $Floor
 
 class current_tile:
@@ -72,11 +71,6 @@ func generate():
 		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(3))
 	else:
 		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(4))
-	await get_tree().physics_frame
-	nav_region.bake_navigation_polygon()
-	await nav_region.bake_finished
-	finished.emit()
-	print("fineished")
 
 func pick_tile():
 	var index = randi_range(0,current_tiles.size()-1)
