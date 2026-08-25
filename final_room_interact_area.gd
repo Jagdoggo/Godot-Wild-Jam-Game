@@ -18,6 +18,7 @@ func _ready() -> void:
 	await $"..".finished
 	for area in get_overlapping_areas():
 		if area.has_meta("area"):
+			print("gone")
 			area.queue_free()
 	if Global.dungeon_level > 9:
 		boss = load("res://trash_bot.tscn").instantiate()

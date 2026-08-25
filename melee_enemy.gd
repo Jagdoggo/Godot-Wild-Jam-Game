@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $"Attack Area"
+@onready var ray_cast_2d: RayCast2D = $RayCast2D
 
 var status : Status
 var health : float = 8
@@ -22,6 +23,13 @@ func _physics_process(_delta: float) -> void:
 		status = Status.Attacking
 		animated_sprite_2d.play("attack")
 	else:
+		ray_cast_2d.rotation = global_position.angle_to_point(target.position)
+		if ray_cast_2d.is_colliding():
+			var arr = [velocity.x,velocity.y]
+			var dir = arr.find(arr.min())
+			match dir:
+				0: $Line2D.rotation = velocity
+				1: $RayCast2D/Line2D.default_color = Color.RED
 		velocity = global_position.direction_to(target.global_position) * speed
 	if target.global_position.distance_squared_to(global_position) > 60000:
 		velocity = Vector2.ZERO

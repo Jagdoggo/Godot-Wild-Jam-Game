@@ -71,6 +71,9 @@ func generate():
 		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(3))
 	else:
 		castle_tiles.set_pattern(Vector2i(-8,-101),tileset.get_pattern(4))
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	finished.emit()
 
 func pick_tile():
 	var index = randi_range(0,current_tiles.size()-1)
