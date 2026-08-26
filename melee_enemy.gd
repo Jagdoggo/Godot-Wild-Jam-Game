@@ -13,6 +13,9 @@ extends CharacterBody2D
 var status : Status
 var health : float = 8
 
+var is_sidestep : bool = false
+var sidestep_vel : Vector2
+
 enum Status {
 	Moving,
 	Attacking
@@ -23,14 +26,24 @@ func _physics_process(_delta: float) -> void:
 		status = Status.Attacking
 		animated_sprite_2d.play("attack")
 	else:
+		velocity = global_position.direction_to(target.global_position) * speed
 		ray_cast_2d.rotation = global_position.angle_to_point(target.position)
-		if ray_cast_2d.is_colliding():
+		var is_colliding = ray_cast_2d.is_colliding()
+		if is_colliding and !is_sidestep:
 			var arr = [velocity.x,velocity.y]
 			var dir = arr.find(arr.min())
 			match dir:
-				0: $Line2D.rotation = velocity
-				1: $RayCast2D/Line2D.default_color = Color.RED
-		velocity = global_position.direction_to(target.global_position) * speed
+				0:
+					sidestep_vel = velocity.rotated(deg_to_rad(-90))
+				1:
+					sidestep_vel = velocity.rotated(deg_to_rad(90))
+			is_sidestep = true
+			$Line2D.set_point_position(1,sidestep_vel * 10)
+		if is_sidestep:
+			if !is_colliding:
+				is_sidestep = false
+			else:
+				velocity = sidestep_vel
 	if target.global_position.distance_squared_to(global_position) > 60000:
 		velocity = Vector2.ZERO
 	if status == Status.Moving:
